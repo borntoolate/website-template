@@ -1,0 +1,89 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # sitemap
+  - project
+
+**************************************************************************************************** */
+// .p-sitemap
+//   ul.p-sitemap__list
+//     li.p-sitemap__divider
+//       a.p-sitemap__item(href="")
+//         p.p-sitemap__txt
+//     li.p-sitemap__divider
+//       a.p-sitemap__item(href="")
+//         p.p-sitemap__txt
+//   ul.p-sitemap__list
+//     li.p-sitemap__divider
+//       a.p-sitemap__item(href="")
+//         p.p-sitemap__txt
+
+
+.p-sitemap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+
+
+/* ======================================================================
+
+  ## list
+
+====================================================================== */
+.p-sitemap__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+/* ======================================================================
+
+  ## divider
+
+====================================================================== */
+.p-sitemap__divider {
+  display: block;
+  width: 48%;
+  margin: 0 0 4%;
+}
+.p-sitemap__list > .p-sitemap__divider:nth-child(2n+1):nth-last-child(-n+2),
+.p-sitemap__list > .p-sitemap__divider:nth-child(2n+1):nth-last-child(-n+2) ~ .p-sitemap__divider {
+  margin-bottom: 0;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+}
+
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-sitemap__item {
+  display: inline-block;
+  padding: .3rem 0;
+  color: $g-color-txt-dark;
+  line-height: 1.4;
+}
+
+
+/* ======================================================================
+
+  ## txt
+
+====================================================================== */
+.p-sitemap__txt {
+  font-size: $g-font-size-s;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-sitemap__txt {
+    font-size: $g-font-size;
+  }
+}

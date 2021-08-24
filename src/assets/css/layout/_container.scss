@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # container
+  - layout
+  - 横幅などの指定
+
+**************************************************************************************************** */
+ // l-section > l-container
+
+.l-container {
+  position: relative;
+  @include content-width-padding();
+}
+
+/* full
+---------------------------------------------------------------------- */
+.l-container.l-container--full {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* pcサイズからfull
+---------------------------------------------------------------------- */
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .l-container.l-container--full_from-m {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

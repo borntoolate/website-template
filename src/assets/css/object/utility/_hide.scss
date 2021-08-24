@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # hide
+  - utility
+
+**************************************************************************************************** */
+
+
+/* ======================================================================
+
+  〜まで消す
+
+====================================================================== */
+// ▼pcのときまで消す
+@media print, screen and (max-width: $g-breakpoint-down-l) {
+  .u-hide-until-l {
+    display: none !important;
+  }
+}
+
+// ▼ipadのときまで消す
+@media print, screen and (max-width: $g-breakpoint-down-m) {
+  .u-hide-until-m {
+    display: none !important;
+  }
+}
+
+
+/* ======================================================================
+
+  〜から消す
+
+====================================================================== */
+// ▼pcから消す
+@media print, screen and (min-width: $g-breakpoint-up-l) {
+  .u-hide-from-l {
+    display: none !important;
+  }
+}
+
+// ▼ipadから消す
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .u-hide-from-m {
+    display: none !important;
+  }
+}

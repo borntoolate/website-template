@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # font-size
+  - mixin
+  - 主要なフォントサイズを管理
+
+**************************************************************************************************** */
+
+/* ======================================================================
+
+  ## 通常
+
+====================================================================== */
+@mixin font-size() {
+  font-size: $g-font-size;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 小
+
+====================================================================== */
+@mixin font-size-s() {
+  font-size: $g-font-size-s;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-s-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 極小
+
+====================================================================== */
+@mixin font-size-xs() {
+  font-size: $g-font-size-xs;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-xs-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 中
+
+====================================================================== */
+
+@mixin font-size-m() {
+  font-size: $g-font-size-m;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-m-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 大
+
+====================================================================== */
+@mixin font-size-l() {
+  font-size: $g-font-size-l;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-l-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## 極大
+
+====================================================================== */
+@mixin font-size-xl() {
+  font-size: $g-font-size-xl;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-xl-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## heading
+
+====================================================================== */
+@mixin font-size-heading() {
+  font-size: $g-font-size-heading;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-heading-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## title
+
+====================================================================== */
+@mixin font-size-title() {
+  font-size: $g-font-size-title;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    font-size: $g-font-size-title-pc;
+  }
+}

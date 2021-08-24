@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # content-width-padding
+  - mixin
+  - コンテンツの横幅を設定(padding)
+
+**************************************************************************************************** */
+
+@mixin content-width-padding() {
+  width: 100%;
+  padding: 0 $g-content-side-gutter;
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    padding: 0 $g-content-side-gutter-pc;
+  }
+}

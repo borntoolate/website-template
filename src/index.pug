@@ -1,0 +1,87 @@
+extend /_includes/_layout
+append variables
+  //- Required
+  - var pageTitle= "";
+  - var pageDescription= site.description;
+  - var pageKeywords= site.keywords;
+  //- Optional
+  - var pageOgpTitle= "";
+  - var pageOgpImage= site.ogpImage
+  - var pageLang= "ja";
+  - var pageOgpType= "website";
+  //- Not modified
+  - var pageUrl= relativePath;
+  - var _relativePath= "./";
+  //- page
+  - var _pagePrefix= "home";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-home-kv
+    div.l-home-kv__container
+      div.s-home-kv-title
+        h1.s-home-kv-title__item home key visual
+    div.l-home-kv__image
+      img.js-ofi(src=`${_relativePath}assets/img/other/dummy.jpg` alt="")
+
+
+  div#js-header-trg
+  //- **********************************************************************
+  //- section
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l
+    div.l-container
+      h1.p-title title
+      div.c-sentence
+        p.c-sentence__item それからちょうど七年たったのです。ファゼーロたちの組合は、はじめはなかなかうまく行かなかったのでしたが、それでもどうにか面白く続けることができたのでした。
+        p.c-sentence__item 私はそれから何べんも遊びに行ったり相談のあるたびに友だちにきいたりして、それから三年の後には、とうとうファゼーロたちは立派な一つの産業組合をつくり、ハムと皮類と醋酸とオートミールはモリーオの市やセンダードの市はもちろん、広くどこへも出るようになりました。
+        div.c-sentence__item
+          ul.c-list
+            li.c-list__item つめくさ灯ともす 夜のひろば
+              ul.c-list
+                li.c-list__item むかしのラルゴを うたいかわし
+                  br
+                  | 雲をもどよもし 夜風にわすれて
+                li.c-list__item とりいれまぢかに 年ようれぬ
+            li.c-list__item まさしきねがいに いさかうとも
+        div.c-sentence__item
+          ol.c-ordered-list
+            li.c-ordered-list__item まさしきねがいに いさかうとも
+            li.c-ordered-list__item 銀河のかなたに ともにわらい
+              ol.c-ordered-list
+                li.c-ordered-list__item まさしきねがいに いさかうとも
+                li.c-ordered-list__item 銀河のかなたに ともにわらい
+                  br
+                  |  銀河のかなたに ともにわらい
+            li.c-ordered-list__item なべてのなやみを たきぎともしつつ
+            li.c-ordered-list__item はえある世界を ともにつくらん
+      div.p-btn
+        a.p-btn__item(href=`${_relativePath}`)
+          p.p-btn__txt もっと見る
+
+
+  //- **********************************************************************
+  //- news
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-l
+    div.l-container
+      h1.p-title news
+      ul.p-article-list
+        li.p-article-list__item
+          a.p-article-list__inner(href="#")
+            div.p-article-list__head
+              time.p-article-list__date(datetime="2020-07-07") 2020.07.07 tue
+              h2.p-article-list__title 二、つめくさのあかり
+            div.p-article-list__body
+              p.p-article-list__txt それからちょうど十日ばかりたって、夕方、わたくしが役所から帰って両手でカフスをはずしていましたら、いきなりあのファゼーロが、戸口から顔を出しました。
+        li.p-article-list__item
+          a.p-article-list__inner(href="#")
+            div.p-article-list__head
+              time.p-article-list__date(datetime="2020-07-07") 2020.07.07 tue
+              h2.p-article-list__title そしてわたくしが、まだびっくりしているうちに、
+            div.p-article-list__body
+              p.p-article-list__txt 「とうとう来たよ、今晩は。」と云いました。
+

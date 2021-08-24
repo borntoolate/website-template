@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # bg
+  - theme
+
+**************************************************************************************************** */
+
+.t-bg-skelton {
+  background-color: transparent !important;
+}
+
+.t-bg-white {
+  background-color: $g-color-white;
+}
+
+.t-bg-gray {
+  background-color: $g-color-gray-light;
+}
+
+.t-bg-stripe-blue {
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 50%,
+    $g-color-blue 50%,
+    $g-color-blue 100%,
+  );
+  background-size: 3.7rem 3.7rem;
+  background-color: $g-color-white;
+}

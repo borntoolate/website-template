@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # copy
+  - project
+
+**************************************************************************************************** */
+
+.p-copy {
+  margin-top: 1rem;
+  font-size: $g-font-size-s;
+  text-align: center;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-copy {
+    margin-top: 3rem;
+    font-size: $g-font-size-pc;
+  }
+}

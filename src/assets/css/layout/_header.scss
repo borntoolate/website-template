@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # header
+  - layout
+
+**************************************************************************************************** */
+
+
+.l-header {
+  @include z-index(header);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $g-header-height;
+  background-color: $g-color-white;
+}
+.l-header.is-fixed {
+  position: fixed;
+  transform: translate(0, -105%);
+  height: $g-header-height-fixed;
+}
+.header-is-fixed .l-header.is-fixed {
+  transition: $g-transition-duration $g-transition-timing-function;
+}
+.site-scroll-up .l-header.is-fixed {
+  transform: translate(0, 0);
+  transition: .48s $ease-out-custom;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .l-header {
+    height: $g-header-height-pc;
+  }
+  .l-header.is-fixed {
+    height: $g-header-height-fixed-pc;
+  }
+}
+
+/* gnav展開時
+---------------------------------------------------------------------- */
+// .gnav-is-active .l-header {
+//   background-color: $g-color-white;
+// }
+
+
+/* ======================================================================
+
+  container
+
+====================================================================== */
+.l-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 $g-content-side-gutter 0;
+}

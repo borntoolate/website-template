@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # background-img
+  - mixin
+
+**************************************************************************************************** */
+
+@mixin background-img-full($position: center) {
+  background-repeat: no-repeat;
+  background-position: $position;
+  background-size: cover;
+}
+
+@mixin background-img($position: center, $size: contain) {
+  background-repeat: no-repeat;
+  background-position: $position;
+  background-size: $size;
+}

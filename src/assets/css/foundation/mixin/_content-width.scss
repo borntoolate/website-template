@@ -1,0 +1,20 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # content-width
+  - mixin
+  - コンテンツの横幅を設定
+
+**************************************************************************************************** */
+
+@mixin content-width() {
+  width: $g-content-width-small-device;
+  max-width: $g-content-max-width;
+  margin: 0 auto;
+  @media print, screen and (min-width: $g-breakpoint-up-xs) {
+    width: $g-content-width;
+  }
+  @media print, screen and (min-width: $g-breakpoint-up-m) {
+    width: $g-content-width-pc;
+  }
+}

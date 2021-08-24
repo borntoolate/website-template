@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # typography
+  - variable > base
+
+**************************************************************************************************** */
+
+
+/* ======================================================================
+
+  ## font-family
+
+====================================================================== */
+$g-font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+$g-font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
+
+
+/* ======================================================================
+
+  ## 行間
+
+====================================================================== */
+$g-line-height: 1.75;
+
+
+/* ======================================================================
+
+  ## 太さ
+
+====================================================================== */
+$g-font-weight-normal: normal;
+$g-font-weight-bold: bold;
+
+
+/* ======================================================================
+
+  ## 大きさ
+
+====================================================================== */
+$g-font-size: 1.4rem;
+$g-font-size-pc: 1.4rem;
+
+$g-font-size-s: 1.2rem;
+$g-font-size-s-pc: 1.2rem;
+
+$g-font-size-xs: 1rem;
+$g-font-size-xs-pc: 1rem;
+
+$g-font-size-m: 1.6rem;
+$g-font-size-m-pc: 1.6rem;
+
+$g-font-size-l: 1.8rem;
+$g-font-size-l-pc: 1.6rem;
+
+$g-font-size-xl: 1.8rem;
+$g-font-size-xl-pc: 3.8rem;
+
+$g-font-size-heading: 1.8rem;
+$g-font-size-heading-pc: 1.6rem;
+
+$g-font-size-title: 2.2rem;
+$g-font-size-title-pc: 2.4rem;

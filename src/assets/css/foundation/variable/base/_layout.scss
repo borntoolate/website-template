@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # layout
+  - variable > base
+
+**************************************************************************************************** */
+
+
+/* ======================================================================
+
+  ## ヘッダーのheight
+
+====================================================================== */
+$g-header-height: 6.2rem;
+$g-header-height-fixed: 6.2rem;
+$g-header-height-pc: 11rem;
+$g-header-height-fixed-pc: 10rem;
+
+
+/* ======================================================================
+
+  ## headerとか主な要素のz-index
+
+====================================================================== */
+$g-header-zindex: 248;
+$g-gnav-zindex: 249;
+$g-modal-layer-zindex: 247;
+$g-loading-zindex: 256;
+
+// 値が比較しづらいz-indexをMap型で一括管理する
+// 参考 https://book2.scss.jp/code/c5/02.html
+// mixinで使用 → /foundation/mixin/_z-index
+$g-stacking-order: (
+  loading: 256,
+  header: 255,
+  over-gnav: 254,
+  gnav: 253,
+  modal-layer: 252,
+  fixed-btn: 255,
+);
+
+
+/* ======================================================================
+
+  ## コンテンツ幅
+
+====================================================================== */
+/* ### width
+---------------------------------------------------------------------- */
+$g-content-width: 89.33333333vw;
+$g-content-width-l: 93.333333vw;
+$g-content-width-s: 76vw;
+
+$g-content-width-small-device: 88vw;
+$g-content-width-pc: 82.08333333vw;// 1182/1440
+$g-content-width-s-pc: 66.66666667vw;// 960/1440
+
+/* ### side gutter
+---------------------------------------------------------------------- */
+$g-content-side-gutter: math.div((100vw - $g-content-width), 2);
+$g-content-l-side-gutter: math.div((100vw - $g-content-width-l), 2);
+$g-content-s-side-gutter: math.div((100vw - $g-content-width-s), 2);
+// pc
+$g-content-side-gutter-pc: math.div((100vw - $g-content-width-pc), 2);
+$g-content-s-side-gutter-pc: math.div((100vw - $g-content-width-s-pc), 2);
+
+/* ### max-width
+---------------------------------------------------------------------- */
+// $g-content-width-pc: 95%;
+$g-content-max-width: 118.2rem;
+$g-content-max-width-l: 116.8rem;
+$g-content-max-width-m: 96.6rem;
+$g-content-max-width-s: 96rem;
+
+
+/* ======================================================================
+
+  ## セクション間のマージン
+
+====================================================================== */
+$g-section-gutter: 7.2rem;
+$g-section-gutter-pc: 15.6rem;

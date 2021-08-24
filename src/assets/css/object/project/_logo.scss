@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # logo
+  category: project
+
+**************************************************************************************************** */
+// ```
+// div.c-logo.p-logo.p-logo--type_header
+//   a.c-logo__inner(href=`${_relativePath}`)
+//     img.c-logo__item(src=`${_relativePath}assets/img/logo/logo.svg` alt="logo")
+// ```
+
+.p-logo {
+  display: block;
+  position: relative;
+}
+
+/* ## header
+---------------------------------------------------------------------- */
+.p-logo.p-logo--type_header {
+  @include z-index(over-gnav);
+  position: relative;
+  width: 10.2rem;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-logo.p-logo--type_header {
+    width: 16rem;
+  }
+}
+
+/* ## footer
+---------------------------------------------------------------------- */
+.p-logo.p-logo--type_footer {
+  width: 13.8rem;
+  margin: 0 auto 3.2rem;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-logo.p-logo--type_footer {
+    max-width: 16rem;
+    margin: 0 0 2rem 0;
+  }
+}
+
+
+/* ======================================================================
+
+  ## c-logo__inner
+
+====================================================================== */
+.p-logo .c-logo__inner {
+  @include fitted-image($ratioWidth: 174, $ratioHeight: 40);
+}

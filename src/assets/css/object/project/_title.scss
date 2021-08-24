@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # title
+  - project
+
+**************************************************************************************************** */
+
+.p-title {
+  margin-bottom: 2rem;
+  font-size: $g-font-size-title;
+  color: $g-color-black;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-title {
+    margin-bottom: 2.4rem;
+  }
+}

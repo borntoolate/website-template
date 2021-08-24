@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # txt-align
+  - utility
+
+**************************************************************************************************** */
+
+.u-txt-align-right {
+  text-align: right !important;
+}
+
+.u-txt-align-center {
+  text-align: center !important;
+}
+
+.u-txt-align-left {
+  text-align: left !important;
+}
+
+@media print, screen and (min-width: $g-breakpoint-up-l) {
+  .u-txt-align-center-from-l {
+    text-align: center !important;
+  }
+}
+
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .u-txt-align-center-from-m {
+    text-align: center !important;
+  }
+}

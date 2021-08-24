@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # sns
+  - project
+
+**************************************************************************************************** */
+// ul.p-sns
+//   li.p-sns__divider
+//     a.p-sns__item(href="https://www.facebook.com/" target="_blank")
+//       img.p-sns__icon(src=`${_relativePath}assets/img/icon/facebook.svg` alt="facebook")
+
+
+.p-sns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+}
+
+
+/* ======================================================================
+
+  ## divider
+
+====================================================================== */
+.p-sns__divider {
+  display: block;
+}
+.p-sns__divider + .p-sns__divider {
+  margin-left: 2rem;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-sns__divider + .p-sns__divider {
+    margin-left: 4rem;
+  }
+}
+
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-sns__item {
+  display: block;
+}
+
+
+/* ======================================================================
+
+  ## icon
+
+====================================================================== */
+.p-sns__icon {
+  display: block;
+  width: 2.6rem;
+  height: auto;
+}

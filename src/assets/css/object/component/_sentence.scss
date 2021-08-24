@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # sentnece
+  - component
+
+**************************************************************************************************** */
+
+
+.c-sentence {
+  position: relative;
+}
+
+.c-sentence__item {
+  & + & {
+    margin-top: $g-sentence-gap;
+  }
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .c-sentence__item {
+    & + & {
+      margin-top: $g-sentence-gap-pc;
+    }
+  }
+}

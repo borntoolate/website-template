@@ -1,0 +1,229 @@
+@charset "UTF-8";
+@use "sass:math";
+// FLOCSS参考
+// https://github.com/hiloki/flocss
+
+/* ****************************************************************************************************
+
+  # foundation
+  - リセットcssや変数など
+
+**************************************************************************************************** */
+
+/* ## function
+---------------------------------------------------------------------- */
+@import "foundation/function/_get-vw";
+@import "foundation/function/_get-aspect-ratio";
+
+/* ## var
+---------------------------------------------------------------------- */
+// base
+@import "foundation/variable/base/_breakpoint";
+@import "foundation/variable/base/_color";
+@import "foundation/variable/base/_animation";
+@import "foundation/variable/base/_easing";
+@import "foundation/variable/base/_typography";
+@import "foundation/variable/base/_layout";
+// component(object > componentのための変数)
+@import "foundation/variable/component/_divider";
+@import "foundation/variable/component/_fade-in";
+@import "foundation/variable/component/_layered-image";
+@import "foundation/variable/component/_notice-list";
+@import "foundation/variable/component/_row";
+@import "foundation/variable/component/_sentence";
+
+/* ## mixin
+---------------------------------------------------------------------- */
+@import "foundation/mixin/_appear-up";
+@import "foundation/mixin/_auto-kerning";
+@import "foundation/mixin/_background-img";
+@import "foundation/mixin/_content-width-padding";
+@import "foundation/mixin/_content-width";
+@import "foundation/mixin/_fitted-image";
+@import "foundation/mixin/_font-family";
+@import "foundation/mixin/_font-size";
+@import "foundation/mixin/_liquid-img";
+@import "foundation/mixin/_replace-txt";
+@import "foundation/mixin/_z-index";
+
+/* ## reset base
+---------------------------------------------------------------------- */
+// @import "foundation/base/_fonts";
+@import "foundation/base/_sanitize";
+@import "foundation/base/_base";
+
+
+
+/* ****************************************************************************************************
+
+  # layout
+  - デザインの大枠（ワイヤーフレームで表現されるようなエリア）
+  - 要素の具体的なスタイルはobject/project/で指定
+
+**************************************************************************************************** */
+
+@import "layout/_body";// レイヤー以外のコンテンツ
+@import "layout/_container";
+@import "layout/_footer";
+@import "layout/_header";
+@import "layout/_kv";
+@import "layout/_home-kv";
+@import "layout/_main";// ヘッダーとフッターを除いたコンテンツ
+@import "layout/_section";
+
+
+
+/* ****************************************************************************************************
+
+  # object
+  - component: プロジェクトを跨いで使用できるような汎用的なもの
+  - project: プロジェクト固有のスタイルを指定（主にここを編集する）
+
+**************************************************************************************************** */
+
+/* ======================================================================
+
+  ## component
+
+====================================================================== */
+// a
+@import "object/component/_accordion";
+// d
+@import "object/component/_divider";
+// h
+@import "object/component/_heading";
+// f
+@import "object/component/_fade-in";
+@import "object/component/_fade-up";
+// l
+@import "object/component/_layered-image";
+@import "object/component/_liquid-img";
+@import "object/component/_list";
+@import "object/component/_logo";
+// n
+@import "object/component/_notice-list";
+// o
+@import "object/component/_ordered-list";
+// p
+@import "object/component/_placeholder";
+// r
+@import "object/component/_row";
+// s
+@import "object/component/_sentence";
+// t
+
+
+/* ======================================================================
+
+  ## project
+
+====================================================================== */
+// a
+@import "object/project/_accordion";
+@import "object/project/_article-list";
+// b
+@import "object/project/_bnr";
+@import "object/project/_btn";
+// c
+@import "object/project/_card";
+@import "object/project/_copy";
+// d
+// e
+// f
+// g
+@import "object/project/_gnav";
+// h
+@import "object/project/_hamburger";
+// i
+// k
+@import "object/project/_kv-title";
+// l
+@import "object/project/_loading";
+@import "object/project/_logo";
+// m
+// n
+// o
+// p
+// q
+// r
+// s
+@import "object/project/_sitemap";
+@import "object/project/_sns";
+// t
+@import "object/project/_tab";
+@import "object/project/_title";
+// v
+// y
+// w
+
+
+/* ======================================================================
+
+  ## scope
+  - ページや場所固有の使いまわせそうにないもの
+  - (影響範囲が分からなくなるため使いまわすのはNG)
+
+====================================================================== */
+// a
+// b
+// c
+// d
+// f
+// g
+// h
+@import "object/scope/_home-kv-title";
+// i
+// j
+// k
+// l
+// m
+// n
+// o
+// p
+// r
+// s
+// t
+// v
+// w
+
+
+/* ======================================================================
+
+  ## theme
+  - クラスを付与で文字色が変わったりする、色などに関するスタイル
+
+====================================================================== */
+
+@import "object/theme/_bg";
+@import "object/theme/_border";
+@import "object/theme/_color";
+@import "object/theme/_highlight";
+
+
+/* ======================================================================
+
+  ## utility
+  - pcのときは非表示、余白の設定などの汎用クラス
+
+====================================================================== */
+
+@import "object/utility/_align";
+@import "object/utility/_anchor-txt";
+@import "object/utility/_clearfix";
+@import "object/utility/_clip";
+@import "object/utility/_hide";
+@import "object/utility/_margin";
+@import "object/utility/_padding";
+@import "object/utility/_txt-align";
+@import "object/utility/_txt-bold";
+@import "object/utility/_z-index";
+
+
+/* ****************************************************************************************************
+
+  ## plugin
+  - プラグイン用のcss
+
+**************************************************************************************************** */
+
+// @import "plugin/swiper/_swiper";

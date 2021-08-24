@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # notice-list
+  - variable > component
+  - 米印のリスト※
+
+**************************************************************************************************** */
+
+$g-notice-list-font-size: $g-font-size;
+$g-notice-list-font-size-pc: ($g-font-size-pc - .1);
+$g-notice-list-bullet-gap: .2em ;
+$g-notice-list-offset: (1em + $g-notice-list-bullet-gap);
+$g-notice-list-color: $g-color-txt;
+$g-notice-list-line-spacing: 1.4;
+$g-notice-list-gutter: .2em;
+
+$g-notice-list-gap: 1.4rem;
+$g-notice-list-gap-pc: 1.4rem;
+$g-notice-list-gap-s: 1rem;
+$g-notice-list-gap-s-pc: 1rem;
+$g-notice-list-gap-l: 2rem;
+$g-notice-list-gap-l-pc: 2rem;

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # home-kv
+  - layout
+
+**************************************************************************************************** */
+
+.l-home-kv {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 25rem;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .l-home-kv {
+    height: 50rem;
+  }
+}
+
+
+/* ======================================================================
+
+  ## container
+
+====================================================================== */
+.l-home-kv__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 $g-content-side-gutter;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .l-home-kv__container {
+    height: 50rem;
+    padding: 0 $g-content-side-gutter-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## image
+
+====================================================================== */
+.l-home-kv__image {
+  display: block;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  &::after {
+    display: block;
+    z-index: 1;
+    opacity: .7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #071505;
+    mix-blend-mode: overlay;
+    content: "";
+  }
+}
+
+/* ### img
+---------------------------------------------------------------------- */
+.l-home-kv__image > img {
+  display: block;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+}

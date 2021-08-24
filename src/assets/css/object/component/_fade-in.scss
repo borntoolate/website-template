@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # fade-in
+  - component
+  - 透明度の調整で浮かび上がる画像
+
+**************************************************************************************************** */
+
+.c-fade-in {
+  opacity: 0;
+  transition: opacity $g-fade-in-animation-duration $g-fade-in-animation-function $g-fade-in-animation-duration-delay;
+}
+
+.c-fade-in.is-inview {
+  opacity: 1;
+}

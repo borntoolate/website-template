@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # list
+  - component
+
+**************************************************************************************************** */
+
+.c-list {
+  display: block;
+  list-style-type: disc;
+  padding: 0 0 0 1.8rem;
+}
+
+.c-list .c-list {
+  list-style-type: circle;
+}
+
+.c-list .c-list .c-list {
+  list-style-type: disc;
+}
+
+.c-list__item > .c-list {
+  margin-top: .5rem;
+}
+
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.c-list__item {
+  display: list-item;
+  list-style-type: inherit;
+  position: relative;
+  line-height: 1.5;
+}
+
+.c-list__item + .c-list__item {
+  margin-top: .5rem;
+}

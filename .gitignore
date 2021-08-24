@@ -1,0 +1,6 @@
+node_modules/
+htdocs/
+temp/
+
+.env
+*.code-workspace

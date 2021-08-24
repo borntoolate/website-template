@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # tab
+  category: project
+
+**************************************************************************************************** */
+
+
+.p-tab {
+  display: block;
+  position: relative;
+}
+// @media print, screen and (min-width: $g-breakpoint-up-m) {
+//   .p-tab {
+//   }
+// }
+
+
+/* ======================================================================
+
+  body
+
+====================================================================== */
+.p-tab__body {
+  position: relative;
+}
+.p-tab__head + .p-tab__body {
+  margin-top: 1.6rem;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-tab__head + .p-tab__body {
+    margin-top: 2.4rem;
+  }
+}
+
+
+/* ======================================================================
+
+  cont
+
+====================================================================== */
+.p-tab__cont {
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition:
+    height 0s $ease-out-custom .25s,
+    margin 0s $ease-out-custom .25s,
+    padding 0s $ease-out-custom .25s,
+    opacity .15s $g-transition-timing-function,
+    visibility .15s $g-transition-timing-function;
+}
+// アクティブ時
+.p-tab__cont.is-current {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  transition:
+    height 0s $ease-out-custom,
+    margin 0s $ease-out-custom,
+    padding 0s $ease-out-custom,
+    opacity .2s $g-transition-timing-function .15s,
+    visibility .2s $g-transition-timing-function .15s;
+}

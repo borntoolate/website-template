@@ -1,0 +1,109 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # accordion
+  - project
+
+**************************************************************************************************** */
+
+.p-accordion {
+  display: block;
+  position: relative;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+}
+
+
+/* ======================================================================
+
+  ## head
+
+====================================================================== */
+.p-accordion__head {
+  position: relative;
+  padding: 0 1.2rem 0 0;
+  cursor: pointer;
+  //- ▼triangle
+  &::before {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%) scale(.8, 1) rotate(45deg);
+    width: .7rem;
+    height: .7rem;
+    background-color: transparent;
+    border-right: .1rem solid $g-color-black;
+    border-bottom: .1rem solid $g-color-black;
+    transition: transform $g-transition-duration $g-transition-timing-function;
+    content: "";
+  }
+}
+.p-accordion.is-open .p-accordion__head {
+  //- ▼triangle
+  &::before {
+    transform: translate(0, -50%) scale(.8, 1) rotate(-135deg);
+  }
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-accordion__head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    //- ▼triangle
+    &::before {
+      top: 44%;
+      width: .8rem;
+      height: .8rem;
+    }
+  }
+}
+
+
+/* ======================================================================
+
+  ## title
+
+====================================================================== */
+.p-accordion__title {
+  color: $g-color-black;
+  font-size: $g-font-size-m;
+  font-weight: $g-font-weight-bold;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-accordion__title {
+    width: 100%;
+    font-size: $g-font-size-m-pc;
+  }
+}
+
+
+/* ======================================================================
+
+  ## body
+
+====================================================================== */
+.p-accordion.is-open > .p-accordion__body {
+  padding-top: 1.1rem;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-accordion.is-open > .p-accordion__body {
+    padding-top: 1.6rem;
+  }
+}
+
+
+/* ======================================================================
+
+  ## txt
+
+====================================================================== */
+.p-accordion__txt {
+  font-size: $g-font-size;
+  line-height: 1.5;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .p-accordion__txt {
+    font-size: $g-font-size-pc;
+  }
+}

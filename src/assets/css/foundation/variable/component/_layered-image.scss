@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # layered-image
+  - category: variable > component
+
+**************************************************************************************************** */
+
+$g-layered-image-width: 100% !default;
+$g-layered-image-color: $g-color-white !default;
+$g-layered-image-animation: 1s .2s cubic-bezier(0.48, 0.18, 0, 0.98);

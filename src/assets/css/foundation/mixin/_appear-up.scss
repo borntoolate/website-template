@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # appear-up
+  - mixin
+
+**************************************************************************************************** */
+
+@mixin appear-up($transform-value: translateY(220%), $transition-time: .8s, $transition-property: transform) {
+  transform: $transform-value;
+  transition: $transition-property $transition-time cubic-bezier(.24,.27,.38,.99);
+}

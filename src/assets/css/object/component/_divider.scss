@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/* ****************************************************************************************************
+
+  # divider
+  - component
+
+**************************************************************************************************** */
+// ```
+// .c-divider
+//   ...
+// .c-divider
+//   ...
+// ```
+
+.c-divider + .c-divider {
+  margin-top: $g-divider-gap;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .c-divider + .c-divider {
+    margin-top: $g-divider-gap-pc;
+  }
+}
+
+.c-divider + .c-divider.c-divider--gap_s {
+  margin-top: $g-divider-gap-s;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .c-divider + .c-divider.c-divider--gap_s {
+    margin-top: $g-divider-gap-s-pc;
+  }
+}
+
+.c-divider + .c-divider.c-divider--gap_l {
+  margin-top: $g-divider-gap-l;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .c-divider + .c-divider.c-divider--gap_l {
+    margin-top: $g-divider-gap-l-pc;
+  }
+}

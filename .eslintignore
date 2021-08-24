@@ -1,0 +1,6 @@
+/.eslintrc.js
+/webpack.config.js
+/htdocs/**
+/node_modules/**
+/src/assets/js/module/vendor/**
+/temp/**

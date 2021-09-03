@@ -1,31 +1,31 @@
 @charset "UTF-8";
 /* ****************************************************************************************************
 
-  # font-size
+  # txt-size
   - utility
 
 **************************************************************************************************** */
 
-.u-font-size-xs {
+.u-txt-size-xs {
   @include font-size-xs();
 }
 
-.u-font-size-s {
+.u-txt-size-s {
   @include font-size-s();
 }
 
-.u-font-size {
+.u-txt-size {
   @include font-size();
 }
 
-.u-font-size-m {
+.u-txt-size-m {
   @include font-size-m();
 }
 
-.u-font-size-l {
+.u-txt-size-l {
   @include font-size-l();
 }
 
-.u-font-size-xl {
+.u-txt-size-xl {
   @include font-size-xl();
 }

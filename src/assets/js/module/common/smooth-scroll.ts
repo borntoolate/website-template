@@ -16,7 +16,7 @@ export class SmoothScroll {
     this.endPositionY = 0;
     this.startTime = 0;
     this.animationId = 0;
-    this.duration = 500;
+    this.duration = 700;
 
     this.bindEvent();
   }
@@ -29,7 +29,16 @@ export class SmoothScroll {
       if (!(e.target instanceof HTMLAnchorElement)) {
         return;
       }
-      const clickedTarget: HTMLAnchorElement = e.target;
+      const eventTarget: HTMLElement = e.target;
+      let clickedTarget: HTMLElement | null = null;
+      if (!(eventTarget instanceof HTMLAnchorElement)) {
+        clickedTarget = eventTarget.closest('a[href^="#"]');
+      } else if (eventTarget instanceof HTMLAnchorElement) {
+        clickedTarget = eventTarget;
+      }
+      if (clickedTarget === null) {
+        return;
+      }
       // スクロール先の要素のidを取得
       const destinationElmId: string | null = clickedTarget.getAttribute('href');
       if (destinationElmId === null) {
@@ -85,7 +94,7 @@ export class SmoothScroll {
     this.startPositionX = window.scrollX;
     this.startPositionY = window.scrollY;
     this.endPositionX = destinationX != null ? destinationX : window.scrollX;
-    this.endPositionY = destinationY != null ? destinationY - 180 : window.scrollY;
+    this.endPositionY = destinationY != null ? destinationY - 100 : window.scrollY;
     this.startTime = Date.now();
     this.animation();
   }

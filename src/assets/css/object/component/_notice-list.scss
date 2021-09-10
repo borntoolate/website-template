@@ -41,6 +41,17 @@
   }
 }
 
+/* gap-top-0
+---------------------------------------------------------------------- */
+.c-notice-list.c-notice-list--gap_top-0 {
+  margin-top: 0;
+}
+@media print, screen and (min-width: $g-breakpoint-up-m) {
+  .c-notice-list.c-notice-list--gap_top-0 {
+    margin-top: 0;
+  }
+}
+
 
 /* ======================================================================
 

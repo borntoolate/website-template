@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # typography
-  - variable > base
+  - foundation > variable > base
 
 **************************************************************************************************** */
 
@@ -12,8 +11,8 @@
   ## font-family
 
 ====================================================================== */
-$g-font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-$g-font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
+$font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+$font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
 
 
 /* ======================================================================
@@ -21,7 +20,7 @@ $g-font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino
   ## 行間
 
 ====================================================================== */
-$g-line-height: 1.75;
+$line-height: 1.75;
 
 
 /* ======================================================================
@@ -29,8 +28,8 @@ $g-line-height: 1.75;
   ## 太さ
 
 ====================================================================== */
-$g-font-weight-normal: normal;
-$g-font-weight-bold: bold;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
 
 
 /* ======================================================================
@@ -38,26 +37,26 @@ $g-font-weight-bold: bold;
   ## 大きさ
 
 ====================================================================== */
-$g-font-size: 1.4rem;
-$g-font-size-pc: 1.4rem;
+$font-size: 1.4rem;
+$font-size-mq-min-md: 1.4rem;
 
-$g-font-size-s: 1.2rem;
-$g-font-size-s-pc: 1.2rem;
+$font-size-sm: 1.2rem;
+$font-size-sm-mq-min-md: 1.2rem;
 
-$g-font-size-xs: 1rem;
-$g-font-size-xs-pc: 1rem;
+$font-size-xs: 1rem;
+$font-size-xs-mq-min-md: 1rem;
 
-$g-font-size-m: 1.6rem;
-$g-font-size-m-pc: 1.6rem;
+$font-size-md: 1.6rem;
+$font-size-md-mq-min-md: 1.6rem;
 
-$g-font-size-l: 1.8rem;
-$g-font-size-l-pc: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-lg-mq-min-md: 1.6rem;
 
-$g-font-size-xl: 1.8rem;
-$g-font-size-xl-pc: 3.8rem;
+$font-size-xl: 1.8rem;
+$font-size-xl-mq-min-md: 3.8rem;
 
-$g-font-size-heading: 1.8rem;
-$g-font-size-heading-pc: 1.6rem;
+$font-size-heading: 1.8rem;
+$font-size-heading-mq-min-md: 1.6rem;
 
-$g-font-size-title: 2.2rem;
-$g-font-size-title-pc: 2.4rem;
+$font-size-title: 2.2rem;
+$font-size-title-mq-min-md: 2.4rem;

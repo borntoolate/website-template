@@ -1,15 +1,14 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # divider
-  - variable > component
+  - foundation > variable > component
   - コンテンツ間の余白
 
 **************************************************************************************************** */
 
-$g-divider-gap: 3rem;
-$g-divider-gap-pc: 9rem;
-$g-divider-gap-s: 1.4rem;
-$g-divider-gap-s-pc: 2.8rem;
-$g-divider-gap-l: 5rem;
-$g-divider-gap-l-pc: 8.6rem;
+$divider-gap: 3rem;
+$divider-gap-mq-min-md: 9rem;
+$divider-gap-s: 1.4rem;
+$divider-gap-s-mq-min-md: 2.8rem;
+$divider-gap-l: 5rem;
+$divider-gap-l-mq-min-md: 8.6rem;

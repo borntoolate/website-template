@@ -1,10 +1,11 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # home-kv-title
   - scope
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .s-home-kv-title {
   text-align: center;
@@ -18,9 +19,9 @@
 ====================================================================== */
 .s-home-kv-title__item {
   font-size: 3rem;
-  color: $g-color-white;
+  color: global.$color-white;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .s-home-kv-title__item {
     font-size: 4rem;
   }

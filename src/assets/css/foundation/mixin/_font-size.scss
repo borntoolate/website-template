@@ -1,11 +1,13 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # font-size
-  - mixin
+  - foundation > mixin
   - 主要なフォントサイズを管理
 
 **************************************************************************************************** */
+@use "../variable/typography";
+@use "../variable/breakpoint";
+
 
 /* ======================================================================
 
@@ -13,9 +15,9 @@
 
 ====================================================================== */
 @mixin font-size() {
-  font-size: $g-font-size;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-pc;
+  font-size: typography.$font-size;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-mq-min-md;
   }
 }
 
@@ -26,9 +28,9 @@
 
 ====================================================================== */
 @mixin font-size-s() {
-  font-size: $g-font-size-s;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-s-pc;
+  font-size: typography.$font-size-sm;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-sm-mq-min-md;
   }
 }
 
@@ -39,9 +41,9 @@
 
 ====================================================================== */
 @mixin font-size-xs() {
-  font-size: $g-font-size-xs;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-xs-pc;
+  font-size: typography.$font-size-xs;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-xs-mq-min-md;
   }
 }
 
@@ -53,9 +55,9 @@
 ====================================================================== */
 
 @mixin font-size-m() {
-  font-size: $g-font-size-m;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-m-pc;
+  font-size: typography.$font-size-md;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-md-mq-min-md;
   }
 }
 
@@ -66,9 +68,9 @@
 
 ====================================================================== */
 @mixin font-size-l() {
-  font-size: $g-font-size-l;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-l-pc;
+  font-size: typography.$font-size-lg;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-lg-mq-min-md;
   }
 }
 
@@ -79,9 +81,9 @@
 
 ====================================================================== */
 @mixin font-size-xl() {
-  font-size: $g-font-size-xl;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-xl-pc;
+  font-size: typography.$font-size-xl;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-xl-mq-min-md;
   }
 }
 
@@ -92,9 +94,9 @@
 
 ====================================================================== */
 @mixin font-size-heading() {
-  font-size: $g-font-size-heading;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-heading-pc;
+  font-size: typography.$font-size-heading;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-heading-mq-min-md;
   }
 }
 
@@ -105,8 +107,8 @@
 
 ====================================================================== */
 @mixin font-size-title() {
-  font-size: $g-font-size-title;
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    font-size: $g-font-size-title-pc;
+  font-size: typography.$font-size-title;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    font-size: typography.$font-size-title-mq-min-md;
   }
 }

@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # hide
   - utility
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
 
 
 /* ======================================================================
@@ -13,15 +13,15 @@
 
 ====================================================================== */
 // ▼pcのときまで消す
-@media print, screen and (max-width: $g-breakpoint-down-l) {
-  .u-hide-until-l {
+@media print, screen and (max-width: global.$breakpoint-max-lg) {
+  .u-hide-mq-max-lg {
     display: none !important;
   }
 }
 
 // ▼ipadのときまで消す
-@media print, screen and (max-width: $g-breakpoint-down-m) {
-  .u-hide-until-m {
+@media print, screen and (max-width: global.$breakpoint-max-md) {
+  .u-hide-mq-max-md {
     display: none !important;
   }
 }
@@ -33,15 +33,15 @@
 
 ====================================================================== */
 // ▼pcから消す
-@media print, screen and (min-width: $g-breakpoint-up-l) {
-  .u-hide-from-l {
+@media print, screen and (min-width: global.$breakpoint-min-lg) {
+  .u-hide-mq-min-lg {
     display: none !important;
   }
 }
 
 // ▼ipadから消す
-@media print, screen and (min-width: $g-breakpoint-up-m) {
-  .u-hide-from-m {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .u-hide-mq-min-md {
     display: none !important;
   }
 }

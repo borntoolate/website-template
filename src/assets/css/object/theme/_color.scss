@@ -1,19 +1,20 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # color
   - theme
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .t-color-white {
-  color: $g-color-white !important;
+  color: global.$color-white !important;
 }
 
 .t-color-black {
-  color: $g-color-txt !important;
+  color: global.$color-txt !important;
 }
 
 .t-color-red {
-  color: $g-color-red !important;
+  color: global.$color-red !important;
 }

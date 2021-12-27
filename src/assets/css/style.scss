@@ -1,57 +1,25 @@
 @charset "UTF-8";
-@use "sass:math";
 // FLOCSS参考
 // https://github.com/hiloki/flocss
+//
+// Dart Sass参考: Sassを@importから@useに置き換えるための手引き
+// https://kojika17.com/2020/05/next-generation-sass-module-system.html
+
 
 /* ****************************************************************************************************
 
   # foundation
-  - リセットcssや変数など
+  - リセットcssやベース
+  - 変数、mixinや関数はfoundation/tool/_global.cssで管理
+  - 必要なscssファイルで@use "/hoge/_global";として読み込む
 
 **************************************************************************************************** */
 
-/* ## function
+/* ## reset, base
 ---------------------------------------------------------------------- */
-@import "foundation/function/_get-vw";
-@import "foundation/function/_get-aspect-ratio";
-
-/* ## var
----------------------------------------------------------------------- */
-// base
-@import "foundation/variable/base/_breakpoint";
-@import "foundation/variable/base/_color";
-@import "foundation/variable/base/_animation";
-@import "foundation/variable/base/_easing";
-@import "foundation/variable/base/_typography";
-@import "foundation/variable/base/_layout";
-// component(object > componentのための変数)
-@import "foundation/variable/component/_divider";
-@import "foundation/variable/component/_fade-in";
-@import "foundation/variable/component/_layered-image";
-@import "foundation/variable/component/_notice-list";
-@import "foundation/variable/component/_row";
-@import "foundation/variable/component/_sentence";
-
-/* ## mixin
----------------------------------------------------------------------- */
-@import "foundation/mixin/_appear-up";
-@import "foundation/mixin/_auto-kerning";
-@import "foundation/mixin/_background-img";
-@import "foundation/mixin/_content-width-padding";
-@import "foundation/mixin/_content-width";
-@import "foundation/mixin/_fitted-image";
-@import "foundation/mixin/_font-family";
-@import "foundation/mixin/_font-size";
-@import "foundation/mixin/_liquid-img";
-@import "foundation/mixin/_replace-txt";
-@import "foundation/mixin/_z-index";
-
-/* ## reset base
----------------------------------------------------------------------- */
-// @import "foundation/base/_fonts";
-@import "foundation/base/_sanitize";
-@import "foundation/base/_base";
-
+// @use "foundation/base/_fonts";
+@use "foundation/base/_sanitize";
+@use "foundation/base/_base";
 
 
 /* ****************************************************************************************************
@@ -62,15 +30,14 @@
 
 **************************************************************************************************** */
 
-@import "layout/_body";// レイヤー以外のコンテンツ
-@import "layout/_container";
-@import "layout/_footer";
-@import "layout/_header";
-@import "layout/_kv";
-@import "layout/_home-kv";
-@import "layout/_main";// ヘッダーとフッターを除いたコンテンツ
-@import "layout/_section";
-
+@use "layout/_body";// レイヤー以外のコンテンツ
+@use "layout/_container";
+@use "layout/_footer";
+@use "layout/_header";
+@use "layout/_kv";
+@use "layout/_home-kv";
+@use "layout/_main";// ヘッダーとフッターを除いたコンテンツ
+@use "layout/_section";
 
 
 /* ****************************************************************************************************
@@ -87,29 +54,31 @@
 
 ====================================================================== */
 // a
-@import "object/component/_accordion";
+@use "object/component/_accordion";
 // d
-@import "object/component/_divider";
+@use "object/component/_divider";
 // h
-@import "object/component/_heading";
+@use "object/component/_heading";
 // f
-@import "object/component/_fade-in";
-@import "object/component/_fade-up";
+@use "object/component/_fade-in";
+@use "object/component/_fade-up";
+// g
+@use "object/component/_grid";
 // l
-@import "object/component/_layered-image";
-@import "object/component/_liquid-img";
-@import "object/component/_list";
-@import "object/component/_logo";
+@use "object/component/_layered-image";
+@use "object/component/_liquid-img";
+@use "object/component/_list";
+@use "object/component/_logo";
 // n
-@import "object/component/_notice-list";
+@use "object/component/_notice-list";
 // o
-@import "object/component/_ordered-list";
+@use "object/component/_ordered-list";
 // p
-@import "object/component/_placeholder";
+@use "object/component/_placeholder";
 // r
-@import "object/component/_row";
+@use "object/component/_row";
 // s
-@import "object/component/_sentence";
+@use "object/component/_sentence";
 // t
 
 
@@ -119,27 +88,27 @@
 
 ====================================================================== */
 // a
-@import "object/project/_accordion";
-@import "object/project/_article-list";
+@use "object/project/_accordion" as pAccordion;
+@use "object/project/_article-list";
 // b
-@import "object/project/_bnr";
-@import "object/project/_btn";
+@use "object/project/_bnr";
+@use "object/project/_btn";
 // c
-@import "object/project/_card";
-@import "object/project/_copy";
+@use "object/project/_card";
+@use "object/project/_copy";
 // d
 // e
 // f
 // g
-@import "object/project/_gnav";
+@use "object/project/_gnav";
 // h
-@import "object/project/_hamburger";
+@use "object/project/_hamburger";
 // i
 // k
-@import "object/project/_kv-title";
+@use "object/project/_kv-title";
 // l
-@import "object/project/_loading";
-@import "object/project/_logo";
+@use "object/project/_loading";
+@use "object/project/_logo" as pLogo;
 // m
 // n
 // o
@@ -147,11 +116,11 @@
 // q
 // r
 // s
-@import "object/project/_sitemap";
-@import "object/project/_sns";
+@use "object/project/_sitemap";
+@use "object/project/_sns";
 // t
-@import "object/project/_tab";
-@import "object/project/_title";
+@use "object/project/_tab";
+@use "object/project/_title";
 // v
 // y
 // w
@@ -171,7 +140,7 @@
 // f
 // g
 // h
-@import "object/scope/_home-kv-title";
+@use "object/scope/_home-kv-title";
 // i
 // j
 // k
@@ -194,10 +163,10 @@
 
 ====================================================================== */
 
-@import "object/theme/_bg";
-@import "object/theme/_border";
-@import "object/theme/_color";
-@import "object/theme/_highlight";
+@use "object/theme/_bg";
+@use "object/theme/_border";
+@use "object/theme/_color";
+@use "object/theme/_highlight";
 
 
 /* ======================================================================
@@ -207,16 +176,16 @@
 
 ====================================================================== */
 
-@import "object/utility/_align";
-@import "object/utility/_anchor-txt";
-@import "object/utility/_clearfix";
-@import "object/utility/_clip";
-@import "object/utility/_hide";
-@import "object/utility/_margin";
-@import "object/utility/_padding";
-@import "object/utility/_txt-align";
-@import "object/utility/_txt-bold";
-@import "object/utility/_z-index";
+@use "object/utility/_align";
+@use "object/utility/_anchor-txt";
+@use "object/utility/_clearfix";
+@use "object/utility/_clip";
+@use "object/utility/_hide";
+@use "object/utility/_margin";
+@use "object/utility/_padding";
+@use "object/utility/_txt-align";
+@use "object/utility/_txt-bold";
+@use "object/utility/_z-index";
 
 
 /* ****************************************************************************************************
@@ -226,4 +195,4 @@
 
 **************************************************************************************************** */
 
-// @import "plugin/swiper/_swiper";
+// @use "plugin/swiper/_swiper";

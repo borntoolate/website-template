@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # row
@@ -6,6 +5,12 @@
   - bootstrap参考
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+@use "sass:math";
+
+$col-gutter: 1.5rem;
+$col-gutter-mq-min-md: 3%;
+
 
 .c-row {
   display: flex;
@@ -18,6 +23,7 @@
   justify-content: space-between;
 }
 
+
 /* ======================================================================
 
   col
@@ -26,19 +32,19 @@
 .c-row__col {
   width: 100%;
 }
-@media print, screen and (max-width: $g-breakpoint-down-m) {
+@media print, screen and (max-width: global.$breakpoint-max-md) {
   .c-row__col + .c-row__col {
-    margin-top: $g-col-gutter;
+    margin-top: $col-gutter;
   }
 }
 
 /* タブレットからカラム化
 ---------------------------------------------------------------------- */
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-row__col.c-row__col--m_2 {
-    width: calc(50% - math.div($g-col-gutter-pc, 2));
-    margin-left: $g-col-gutter-pc;
-    margin-bottom: $g-col-gutter-pc;
+    width: calc(50% - math.div($col-gutter-mq-min-md, 2));
+    margin-left: $col-gutter-mq-min-md;
+    margin-bottom: $col-gutter-mq-min-md;
   }
   .c-row > .c-row__col.c-row__col--m_2:nth-child(2n+1) {
     margin-left: 0;
@@ -48,14 +54,14 @@
     margin-bottom: 0;
   }
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-row__col.c-row__col--m_3 {
-    width: calc(33.333333% - math.div($g-col-gutter-pc, 1.5));
-    margin-left: $g-col-gutter-pc;
-    margin-bottom: $g-col-gutter-pc;
+    width: calc(33.333333% - math.div($col-gutter-mq-min-md, 1.5));
+    margin-left: $col-gutter-mq-min-md;
+    margin-bottom: $col-gutter-mq-min-md;
   }
   _:-ms-lang(x), .c-row__col.c-row__col--m_3 {
-    width: calc(33.333333% - math.div($g-col-gutter-pc, 1.5) - .01rem);
+    width: calc(33.333333% - math.div($col-gutter-mq-min-md, 1.5) - .01rem);
   }
   .c-row > .c-row__col.c-row__col--m_3:nth-child(3n+1) {
     margin-left: 0;
@@ -66,20 +72,20 @@
   }
 }
 
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-row.c-row--type_indivisible .c-row__col {
     margin-left: 0 !important;
   }
 }
 
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-row__col.c-row__col--m_4 {
-    width: calc(25% - math.div($g-col-gutter-pc, 1.333));
-    margin-left: $g-col-gutter-pc;
-    margin-bottom: $g-col-gutter-pc;
+    width: calc(25% - math.div($col-gutter-mq-min-md, 1.333));
+    margin-left: $col-gutter-mq-min-md;
+    margin-bottom: $col-gutter-mq-min-md;
   }
   _:-ms-lang(x), .c-row__col.c-row__col--m_4 {
-    width: calc(25% - math.div($g-col-gutter-pc, 1.333) - .01rem);
+    width: calc(25% - math.div($col-gutter-mq-min-md, 1.333) - .01rem);
   }
   .c-row > .c-row__col.c-row__col--m_4:nth-child(4n+1) {
     margin-left: 0;

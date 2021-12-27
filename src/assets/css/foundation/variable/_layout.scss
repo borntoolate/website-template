@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # layout
-  - variable > base
+  - foundation > variable > base
 
 **************************************************************************************************** */
+@use "sass:math";
 
 
 /* ======================================================================
@@ -12,10 +12,10 @@
   ## ヘッダーのheight
 
 ====================================================================== */
-$g-header-height: 6.2rem;
-$g-header-height-fixed: 6.2rem;
-$g-header-height-pc: 11rem;
-$g-header-height-fixed-pc: 10rem;
+$header-height: 6.2rem;
+$header-height-fixed: 6.2rem;
+$header-height-mq-min-md: 11rem;
+$header-height-fixed-mq-min-md: 10rem;
 
 
 /* ======================================================================
@@ -23,15 +23,15 @@ $g-header-height-fixed-pc: 10rem;
   ## headerとか主な要素のz-index
 
 ====================================================================== */
-$g-header-zindex: 248;
-$g-gnav-zindex: 249;
-$g-modal-layer-zindex: 247;
-$g-loading-zindex: 256;
+$header-zindex: 248;
+$gnav-zindex: 249;
+$modal-layer-zindex: 247;
+$loading-zindex: 256;
 
 // 値が比較しづらいz-indexをMap型で一括管理する
 // 参考 https://book2.scss.jp/code/c5/02.html
 // mixinで使用 → /foundation/mixin/_z-index
-$g-stacking-order: (
+$stacking-order: (
   loading: 256,
   header: 255,
   over-gnav: 254,
@@ -48,30 +48,31 @@ $g-stacking-order: (
 ====================================================================== */
 /* ### width
 ---------------------------------------------------------------------- */
-$g-content-width: 89.33333333vw;
-$g-content-width-l: 93.333333vw;
-$g-content-width-s: 76vw;
+$content-width: 92vw;
+$content-width-lg: 92vw;
+$content-width-sm: 76vw;
 
-$g-content-width-small-device: 88vw;
-$g-content-width-pc: 82.08333333vw;// 1182/1440
-$g-content-width-s-pc: 66.66666667vw;// 960/1440
+$content-width-sm-device: 88vw;
+$content-width-mq-min-md: 82.08333333vw;// 1182/1440
+$content-width-sm-mq-min-md: 66.66666667vw;// 960/1440
 
 /* ### side gutter
 ---------------------------------------------------------------------- */
-$g-content-side-gutter: math.div((100vw - $g-content-width), 2);
-$g-content-l-side-gutter: math.div((100vw - $g-content-width-l), 2);
-$g-content-s-side-gutter: math.div((100vw - $g-content-width-s), 2);
+$content-side-gutter: math.div((100vw - $content-width), 2);
+$content-lg-side-gutter: math.div((100vw - $content-width-lg), 2);
+$content-sm-side-gutter: math.div((100vw - $content-width-sm), 2);
 // pc
-$g-content-side-gutter-pc: math.div((100vw - $g-content-width-pc), 2);
-$g-content-s-side-gutter-pc: math.div((100vw - $g-content-width-s-pc), 2);
+$content-side-gutter-sm-device: math.div((100vw - $content-width-sm-device), 2);
+$content-side-gutter-mq-min-md: math.div((100vw - $content-width-mq-min-md), 2);
+$content-sm-side-gutter-mq-min-md: math.div((100vw - $content-width-sm-mq-min-md), 2);
 
 /* ### max-width
 ---------------------------------------------------------------------- */
-// $g-content-width-pc: 95%;
-$g-content-max-width: 118.2rem;
-$g-content-max-width-l: 116.8rem;
-$g-content-max-width-m: 96.6rem;
-$g-content-max-width-s: 96rem;
+// $content-width-mq-min-md: 95%;
+$content-max-width: 118.2rem;
+$content-max-width-lg: 116.8rem;
+$content-max-width-md: 96.6rem;
+$content-max-width-sm: 96rem;
 
 
 /* ======================================================================
@@ -79,5 +80,5 @@ $g-content-max-width-s: 96rem;
   ## セクション間のマージン
 
 ====================================================================== */
-$g-section-gutter: 7.2rem;
-$g-section-gutter-pc: 15.6rem;
+$section-gutter: 7.2rem;
+$section-gutter-mq-min-md: 15.6rem;

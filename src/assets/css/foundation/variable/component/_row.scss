@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # row
-  - category: variable > component
+  - foundation > variable > component
   - c-rowの溝サイズ
 
 **************************************************************************************************** */
 
-$g-col-gutter: 1.5rem;
-$g-col-gutter-pc: 3%;
+$col-gutter: 1.5rem;
+$col-gutter-mq-min-md: 3%;

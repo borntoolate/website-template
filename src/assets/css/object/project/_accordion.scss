@@ -1,17 +1,18 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # accordion
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .p-accordion {
   display: block;
   position: relative;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
-}
+// @media print, screen and (min-width: global.$breakpoint-min-md) {
+// }
 
 
 /* ======================================================================
@@ -33,9 +34,9 @@
     width: .7rem;
     height: .7rem;
     background-color: transparent;
-    border-right: .1rem solid $g-color-black;
-    border-bottom: .1rem solid $g-color-black;
-    transition: transform $g-transition-duration $g-transition-timing-function;
+    border-right: .1rem solid global.$color-black;
+    border-bottom: .1rem solid global.$color-black;
+    transition: transform global.$transition-duration global.$transition-timing-function;
     content: "";
   }
 }
@@ -45,7 +46,7 @@
     transform: translate(0, -50%) scale(.8, 1) rotate(-135deg);
   }
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-accordion__head {
     display: flex;
     justify-content: flex-start;
@@ -66,14 +67,14 @@
 
 ====================================================================== */
 .p-accordion__title {
-  color: $g-color-black;
-  font-size: $g-font-size-m;
-  font-weight: $g-font-weight-bold;
+  color: global.$color-black;
+  font-size: global.$font-size-md;
+  font-weight: global.$font-weight-bold;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-accordion__title {
     width: 100%;
-    font-size: $g-font-size-m-pc;
+    font-size: global.$font-size-md-mq-min-md;
   }
 }
 
@@ -86,7 +87,7 @@
 .p-accordion.is-open > .p-accordion__body {
   padding-top: 1.1rem;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-accordion.is-open > .p-accordion__body {
     padding-top: 1.6rem;
   }
@@ -99,11 +100,11 @@
 
 ====================================================================== */
 .p-accordion__txt {
-  font-size: $g-font-size;
+  font-size: global.$font-size;
   line-height: 1.5;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-accordion__txt {
-    font-size: $g-font-size-pc;
+    font-size: global.$font-size-mq-min-md;
   }
 }

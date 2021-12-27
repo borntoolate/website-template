@@ -1,43 +1,58 @@
-@charset "UTF-8";
 /* ======================================================================
 
   # notice-list
   - component
 
 ====================================================================== */
+@use "../../foundation/tool/global";
+
+$notice-list-font-size: global.$font-size;
+$notice-list-font-size-mq-min-md: (global.$font-size-mq-min-md - .1);
+$notice-list-bullet-gap: .2em;
+$notice-list-offset: (1em + $notice-list-bullet-gap);
+$notice-list-color: global.$color-txt;
+$notice-list-line-spacing: 1.4;
+$notice-list-gutter: .2em;
+
+$notice-list-gap: 1.4rem;
+$notice-list-gap-mq-min-md: 1.4rem;
+$notice-list-gap-sm: 1rem;
+$notice-list-gap-sm-mq-min-md: 1rem;
+$notice-list-gap-lg: 2rem;
+$notice-list-gap-lg-mq-min-md: 2rem;
 
 
 .c-notice-list {
-  margin-top: $g-notice-list-gap;
-  font-size: $g-notice-list-font-size;
-  line-height: $g-notice-list-line-spacing;
+  margin-top: $notice-list-gap;
+  font-size: $notice-list-font-size;
+  line-height: $notice-list-line-spacing;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-notice-list {
-    margin-top: $g-notice-list-gap-pc;
-    font-size: $g-notice-list-font-size-pc;
+    margin-top: $notice-list-gap-mq-min-md;
+    font-size: $notice-list-font-size-mq-min-md;
   }
 }
 
 /* gap-top-s
 ---------------------------------------------------------------------- */
-.c-notice-list.c-notice-list--gap_top-s {
-  margin-top: $g-notice-list-gap-s;
+.c-notice-list.c-notice-list--gap_top-sm {
+  margin-top: $notice-list-gap-sm;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
-  .c-notice-list.c-notice-list--gap_top-s {
-    margin-top: $g-notice-list-gap-s-pc;
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .c-notice-list.c-notice-list--gap_top-sm {
+    margin-top: $notice-list-gap-sm-mq-min-md;
   }
 }
 
 /* gap-top-l
 ---------------------------------------------------------------------- */
-.c-notice-list.c-notice-list--gap_top-l {
-  margin-top: $g-notice-list-gap-l;
+.c-notice-list.c-notice-list--gap_top-lg {
+  margin-top: $notice-list-gap-lg;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
-  .c-notice-list.c-notice-list--gap_top-l {
-    margin-top: $g-notice-list-gap-l-pc;
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .c-notice-list.c-notice-list--gap_top-lg {
+    margin-top: $notice-list-gap-lg-mq-min-md;
   }
 }
 
@@ -46,7 +61,7 @@
 .c-notice-list.c-notice-list--gap_top-0 {
   margin-top: 0;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-notice-list.c-notice-list--gap_top-0 {
     margin-top: 0;
   }
@@ -61,14 +76,14 @@
 .c-notice-list__item {
   list-style-type: none;
   position: relative;
-  padding-left: $g-notice-list-offset;
-  text-indent: (-$g-notice-list-offset);
+  padding-left: $notice-list-offset;
+  text-indent: -($notice-list-offset);
   &::before {
     display: inline;
-    margin-right: $g-notice-list-bullet-gap;
+    margin-right: $notice-list-bullet-gap;
     content: "※";
   }
 }
 .c-notice-list__item + .c-notice-list__item {
-  margin-top: $g-notice-list-gutter;
+  margin-top: $notice-list-gutter;
 }

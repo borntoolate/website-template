@@ -1,18 +1,19 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # main
   - layout
 
 **************************************************************************************************** */
+@use "../foundation/tool/global";
+
 
 .l-main {
   position: relative;
   background-color: transparent;
-  padding: $g-header-height 0 0;
+  padding: global.$header-height 0 0;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-main {
-    padding-top: $g-header-height-pc;
+    padding-top: global.$header-height-mq-min-md;
   }
 }

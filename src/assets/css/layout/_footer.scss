@@ -1,20 +1,21 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # footer
   - layout
 
 **************************************************************************************************** */
+@use "../foundation/tool/global";
+@use "sass:math";
 
 
 .l-footer {
   position: relative;
   padding: 5.8rem 0 2.4rem;
-  background-color: $g-color-gray-light;
+  background-color: global.$color-gray-light;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-footer {
-    padding: math.div($g-section-gutter-pc, 2) 0 5rem;
+    padding: math.div(global.$section-gutter-mq-min-md, 2) 0 5rem;
   }
 }
 
@@ -36,7 +37,7 @@
 .l-footer__bottom {
   margin-top: 4.8rem;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-footer__bottom {
     margin-top: 8rem;
   }
@@ -50,17 +51,17 @@
 ====================================================================== */
 .l-footer__container {
   position: relative;
-  @include content-width-padding();
+  @include global.content-width-padding();
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-footer__container {
-    // width: $g-content-width-pc;
+    // width: global.$content-width-mq-min-md;
   }
 }
 
 /* ### has grid
 ---------------------------------------------------------------------- */
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-footer__container.l-footer__container--has_grid {
     display: flex;
     justify-content: space-between;
@@ -74,7 +75,7 @@
   ## grid
 
 ====================================================================== */
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-footer__grid {
     width: 48%;
   }

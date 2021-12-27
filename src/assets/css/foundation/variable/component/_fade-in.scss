@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # fade-in
-  - variable > component
+  - foundation > variable > component
 
 **************************************************************************************************** */
 
-$g-fade-in-animation-duration: .6s;
-$g-fade-in-animation-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-$g-fade-in-animation-duration-delay: 0s;
+$fade-in-animation-duration: .6s;
+$fade-in-animation-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$fade-in-animation-duration-delay: 0s;

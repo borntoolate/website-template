@@ -1,47 +1,46 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # color
-  - variable > base
+  - foundation > variable > base
 
 **************************************************************************************************** */
 
-$g-color-white: #fff;
-$g-color-black: #000;
+$color-white: #fff;
+$color-black: #000;
 
-$g-color-gray: gray !default;
-$g-color-gray-light: lightgray !default;
-$g-color-gray-med: darkgray !default;
-$g-color-gray-dark: dimgray !default;
+$color-gray: gray !default;
+$color-gray-light: lightgray !default;
+$color-gray-med: darkgray !default;
+$color-gray-dark: dimgray !default;
 
 /* 赤
 ---------------------------------------------------------------------- */
-$g-color-red: red !default;
+$color-red: red !default;
 
 /* ベージュ
 ---------------------------------------------------------------------- */
-$g-color-beige: beige !default;
+$color-beige: beige !default;
 
 /* 青
 ---------------------------------------------------------------------- */
-$g-color-blue: blue !default;;
+$color-blue: blue !default;;
 
 /* 緑
 ---------------------------------------------------------------------- */
-$g-color-green: green !default;
+$color-green: green !default;
 
 /* txt
 ---------------------------------------------------------------------- */
-$g-color-txt: dimgray !default;
-$g-color-txt-dark: #000 !default;
-$g-color-txt-light: lightgray !default;
-$g-color-link: red !default;
+$color-txt: dimgray !default;
+$color-txt-dark: #000 !default;
+$color-txt-light: lightgray !default;
+$color-link: red !default;
 
 /* border
 ---------------------------------------------------------------------- */
-$g-color-border: gray !default;
-$g-color-border-dark: dimgray !default;
+$color-border: gray !default;
+$color-border-dark: dimgray !default;
 
 /* input系列
 ---------------------------------------------------------------------- */
-$g-color-input-bg: $g-color-gray-light !default;
+$color-input-bg: $color-gray-light !default;

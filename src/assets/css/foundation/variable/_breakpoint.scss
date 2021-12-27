@@ -1,8 +1,7 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # breakpoint
-  - variable > base
+  - foundation > variable > base
 
 **************************************************************************************************** */
 /**
@@ -15,16 +14,16 @@
  * iPad Pro: 1024px
  */
 
-$g-breakpoint-up-xs: 360px;
-$g-breakpoint-up-s: 414px;
-$g-breakpoint-up-m: 768px;
-$g-breakpoint-up-l: 1024px;
-$g-breakpoint-up-xl: 1200px;
-$g-breakpoint-up-xxl: 1440px;
-$g-breakpoint-up-xxxl: 1920px;
+$breakpoint-min-xs: 360px;
+$breakpoint-min-sm: 414px;
+$breakpoint-min-md: 768px;
+$breakpoint-min-lg: 1024px;
+$breakpoint-min-xl: 1200px;
+$breakpoint-min-xxl: 1440px;
+$breakpoint-min-xxxl: 1920px;
 
-$g-breakpoint-down-m: 767px;
-$g-breakpoint-down-l: 1023px;
+$breakpoint-max-md: 767px;
+$breakpoint-max-lg: 1023px;
 
 // モバイルファーストでスタイルを記述
 // 基本的に1024~からPCにする
@@ -33,7 +32,7 @@ $g-breakpoint-down-l: 1023px;
 //   margin-bottom: 114px;
 // }
 // ▼pc
-// @media print, screen and (min-width: $g-breakpoint-up-l) {
+// @media print, screen and (min-width: $breakpoint-min-lg) {
 //   .hoge {
 //     margin-bottom: 514px;
 //   }

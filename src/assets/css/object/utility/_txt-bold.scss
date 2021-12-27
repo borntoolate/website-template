@@ -1,11 +1,12 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # txt-bold
   - utility
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .u-txt-bold {
-  font-weight: $g-font-weight-bold !important;
+  font-weight: global.$font-weight-bold !important;
 }

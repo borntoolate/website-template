@@ -1,23 +1,24 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # gnav
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .p-gnav {
   display: block;
   overflow-y: auto;
-  @include z-index(gnav);
+  @include global.z-index(gnav);
   position: fixed;
   top: 0;
   right: 0;
   transform: translateX(100%);
   width: 100%;
   height: 100%;
-  padding: ($g-header-height + 3.8rem) $g-content-side-gutter 5rem;
-  background-color: $g-color-gray;
+  padding: (global.$header-height + 3.8rem) global.$content-side-gutter 5rem;
+  background-color: global.$color-gray;
   font-size: 1.4rem;
   transition: transform .1s;
   -webkit-overflow-scrolling: touch;
@@ -26,7 +27,7 @@
   transform: translateX(0);
   transition: transform 500ms cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-gnav {
     overflow: visible;
     transform: translateX(0);
@@ -46,7 +47,7 @@
 .p-gnav__list {
   display: block;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-gnav__list {
     display: flex;
     justify-content: center;
@@ -69,7 +70,7 @@
 .p-gnav__divider + .p-gnav__divider {
   margin-top: 2.6rem;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-gnav__divider {
   }
   .p-gnav__divider + .p-gnav__divider {
@@ -88,9 +89,9 @@
   display: block;
   position: relative;
   padding: .3rem 1rem .3rem 0;
-  color: $g-color-white;
-  font-size: $g-font-size-m;
-  font-weight: $g-font-weight-bold;
+  color: global.$color-white;
+  font-size: global.$font-size-md;
+  font-weight: global.$font-weight-bold;
   &::after {
     display: block;
     position: absolute;
@@ -99,16 +100,16 @@
     transform: translate(-12%, -50%) scale(1, .8) rotate(45deg);
     width: .8rem;
     height: .8rem;
-    border-top: 1px solid $g-color-white;
-    border-right: 1px solid $g-color-white;
+    border-top: 1px solid global.$color-white;
+    border-right: 1px solid global.$color-white;
     content: "";
   }
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-gnav__item {
     padding: .4rem .8rem;
-    color: $g-color-black;
-    font-size: $g-font-size-m;
+    color: global.$color-black;
+    font-size: global.$font-size-md;
     &::after {
       content: none;
     }
@@ -124,7 +125,7 @@
 .p-gnav__txt {
   line-height: 1.4;
 }
-// @media print, screen and (min-width: $g-breakpoint-up-m) {
+// @media print, screen and (min-width: global.$breakpoint-min-md) {
 //   .p-gnav__txt {
 //   }
 // }

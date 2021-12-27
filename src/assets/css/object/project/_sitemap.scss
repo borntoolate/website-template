@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # sitemap
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
 // .p-sitemap
 //   ul.p-sitemap__list
 //     li.p-sitemap__divider
@@ -57,7 +57,7 @@
 .p-sitemap__list > .p-sitemap__divider:nth-child(2n+1):nth-last-child(-n+2) ~ .p-sitemap__divider {
   margin-bottom: 0;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
 }
 
 
@@ -69,7 +69,7 @@
 .p-sitemap__item {
   display: inline-block;
   padding: .3rem 0;
-  color: $g-color-txt-dark;
+  color: global.$color-txt-dark;
   line-height: 1.4;
 }
 
@@ -80,10 +80,10 @@
 
 ====================================================================== */
 .p-sitemap__txt {
-  font-size: $g-font-size-s;
+  font-size: global.$font-size-sm;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-sitemap__txt {
-    font-size: $g-font-size;
+    font-size: global.$font-size;
   }
 }

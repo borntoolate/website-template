@@ -1,13 +1,12 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # layered-image
-  - mixin
+  - foundation > mixin
   - スクロールして見えたらレイヤーが横にスッとずれる効果がある画像
 
 **************************************************************************************************** */
 
-@mixin layered-image($width: 100%, $color: $g-color-white) {
+@mixin layered-image($width: 100%, $color: $color-white) {
   display: block;
   position: relative;
   overflow: hidden;

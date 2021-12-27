@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # z-index
@@ -6,47 +5,6 @@
 
 **************************************************************************************************** */
 
-
-.u-z-index-0 {
-  z-index: 0 !important;
-}
-
-.u-z-index-1 {
-  z-index: 1 !important;
-}
-
-.u-z-index-2 {
-  z-index: 2 !important;
-}
-
-.u-z-index-3 {
-  z-index: 3 !important;
-}
-
-.u-z-index-4 {
-  z-index: 4 !important;
-}
-
-.u-z-index-5 {
-  z-index: 5 !important;
-}
-
-.u-z-index-6 {
-  z-index: 6 !important;
-}
-
-.u-z-index-7 {
-  z-index: 7 !important;
-}
-
-.u-z-index-8 {
-  z-index: 8 !important;
-}
-
-.u-z-index-9 {
-  z-index: 9 !important;
-}
-
-.u-z-index-10 {
-  z-index: 10 !important;
+@for $i from 0 through 10 {
+  .u-z-index-#{$i} { z-index: #{$i} !important; }
 }

@@ -1,10 +1,11 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # kv-title
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .p-kv-title {
   text-align: center;
@@ -18,9 +19,9 @@
 ====================================================================== */
 .p-kv-title__item {
   font-size: 3rem;
-  color: $g-color-white;
+  color: global.$color-white;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-kv-title__item {
     font-size: 4rem;
   }

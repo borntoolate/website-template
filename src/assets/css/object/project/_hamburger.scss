@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # hamburger
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
 // ```
 // div.p-hamburger#js-gnav-trg
 //   div.p-hamburger__container
@@ -13,11 +13,12 @@
 //     span.p-hamburger__item
 // ```
 
+
 .p-hamburger {
   display: flex;
   justify-content: center;
   align-items: center;
-  @include z-index(over-gnav);
+  @include global.z-index(over-gnav);
   position: relative;
   background-color: transparent;
   width: 3.7rem;
@@ -25,7 +26,7 @@
   padding: 0;
   cursor: pointer;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-hamburger {
     display: none;
   }
@@ -44,7 +45,7 @@
   height: 2.3rem;
   margin: auto;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-hamburger__container {
     width: 3rem;
     height: 2.5rem;
@@ -63,9 +64,9 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: $g-color-black;
+  background-color: global.$color-black;
   margin: auto;
-  transition: $g-transition-duration $g-transition-timing-function;
+  transition: global.$transition-duration global.$transition-timing-function;
 }
 
 .p-hamburger__container > :nth-child(1) {

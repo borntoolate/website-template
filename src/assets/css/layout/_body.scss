@@ -1,10 +1,10 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # body
   - layout
 
 **************************************************************************************************** */
+@use "../foundation/tool/global";
 
 .l-body {
   position: relative;
@@ -16,10 +16,10 @@
     visibility .4s ease-in-out;
   padding: 0 0 0;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-body {
     min-width: 1024px;
-    // padding: $g-header-height-pc 0 0;
+    // padding: $header-height-mq-min-md 0 0;
   }
 }
 

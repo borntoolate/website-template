@@ -1,17 +1,18 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # title
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .p-title {
   margin-bottom: 2rem;
-  font-size: $g-font-size-title;
-  color: $g-color-black;
+  font-size: global.$font-size-title;
+  color: global.$color-black;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-title {
     margin-bottom: 2.4rem;
   }

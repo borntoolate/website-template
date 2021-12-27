@@ -1,10 +1,11 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # fade-up
   - component
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .c-fade-up {
   opacity: 0;
@@ -14,7 +15,7 @@
     opacity .5s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0s,
     top .7s cubic-bezier(0.445, 0.050, 0.550, 0.950) .1s;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-fade-up {
     transition:
     opacity .5s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0s,

@@ -1,10 +1,12 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # article-list
   - project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
+
 // ```
 // .p-article-list
 //   .p-article-list__item
@@ -29,16 +31,16 @@
 
 ====================================================================== */
 .p-article-list__item:nth-child(1) {
-  border-top: 1px dashed $g-color-border;
+  border-top: 1px dashed global.$color-border;
 }
 
 .p-article-list__item {
   display: block;
   position: relative;
   padding: 1.4rem 1.4rem;
-  border-bottom: 1px dashed $g-color-border;
+  border-bottom: 1px dashed global.$color-border;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-article-list__item {
     padding: 2.4rem 2.6rem;
   }
@@ -72,13 +74,13 @@
 ====================================================================== */
 .p-article-list__date {
   position: relative;
-  color: $g-color-txt;
-  font-size: $g-font-size-s;
+  color: global.$color-txt;
+  font-size: global.$font-size-sm;
   line-height: 1.4;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-article-list__date {
-    font-size: $g-font-size-s-pc;
+    font-size: global.$font-size-sm-mq-min-md;
   }
 }
 
@@ -89,16 +91,16 @@
 
 ====================================================================== */
 .p-article-list__title {
-  color: $g-color-txt;
-  font-size: $g-font-size-m;
-  font-weight: $g-font-weight-bold;
+  color: global.$color-txt;
+  font-size: global.$font-size-md;
+  font-weight: global.$font-weight-bold;
 }
 .p-article-list__date + .p-article-list__title {
   margin-top: .5rem;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-article-list__title {
-    font-size: $g-font-size-m-pc;
+    font-size: global.$font-size-md-mq-min-md;
   }
 }
 
@@ -119,11 +121,11 @@
 
 ====================================================================== */
 .p-article-list__txt {
-  font-size: $g-font-size;
-  color: $g-color-txt;
+  font-size: global.$font-size;
+  color: global.$color-txt;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-article-list__txt {
-    font-size: $g-font-size-pc;
+    font-size: global.$font-size-mq-min-md;
   }
 }

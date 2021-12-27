@@ -1,11 +1,12 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # fitted-image
-  - mixin
+  - foundation > mixin
   - padding-topでアスペクト比維持の画像
 
 **************************************************************************************************** */
+@use "sass:math";
+
 
 @mixin fitted-image($width: 100%, $ratioWidth, $ratioHeight, $objectFitCover: false) {
   display: block;

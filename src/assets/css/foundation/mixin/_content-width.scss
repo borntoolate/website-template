@@ -1,20 +1,22 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # content-width
-  - mixin
+  - foundation > mixin
   - コンテンツの横幅を設定
 
 **************************************************************************************************** */
+@use "../variable/layout";
+@use "../variable/breakpoint";
+
 
 @mixin content-width() {
-  width: $g-content-width-small-device;
-  max-width: $g-content-max-width;
+  width: layout.$content-width-sm-device;
+  max-width: layout.$content-max-width;
   margin: 0 auto;
-  @media print, screen and (min-width: $g-breakpoint-up-xs) {
-    width: $g-content-width;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-xs) {
+    width: layout.$content-width;
   }
-  @media print, screen and (min-width: $g-breakpoint-up-m) {
-    width: $g-content-width-pc;
+  @media print, screen and (min-width: breakpoint.$breakpoint-min-md) {
+    width: layout.$content-width-mq-min-md;
   }
 }

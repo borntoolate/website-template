@@ -1,17 +1,17 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # tab
   category: project
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
 
 
 .p-tab {
   display: block;
   position: relative;
 }
-// @media print, screen and (min-width: $g-breakpoint-up-m) {
+// @media print, screen and (min-width: global.$breakpoint-min-md) {
 //   .p-tab {
 //   }
 // }
@@ -28,7 +28,7 @@
 .p-tab__head + .p-tab__body {
   margin-top: 1.6rem;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-tab__head + .p-tab__body {
     margin-top: 2.4rem;
   }
@@ -50,11 +50,11 @@
   width: 100%;
   height: 100%;
   transition:
-    height 0s $ease-out-custom .25s,
-    margin 0s $ease-out-custom .25s,
-    padding 0s $ease-out-custom .25s,
-    opacity .15s $g-transition-timing-function,
-    visibility .15s $g-transition-timing-function;
+    height 0s global.$ease-out-custom .25s,
+    margin 0s global.$ease-out-custom .25s,
+    padding 0s global.$ease-out-custom .25s,
+    opacity .15s global.$transition-timing-function,
+    visibility .15s global.$transition-timing-function;
 }
 // アクティブ時
 .p-tab__cont.is-current {
@@ -62,9 +62,9 @@
   visibility: visible;
   position: relative;
   transition:
-    height 0s $ease-out-custom,
-    margin 0s $ease-out-custom,
-    padding 0s $ease-out-custom,
-    opacity .2s $g-transition-timing-function .15s,
-    visibility .2s $g-transition-timing-function .15s;
+    height 0s global.$ease-out-custom,
+    margin 0s global.$ease-out-custom,
+    padding 0s global.$ease-out-custom,
+    opacity .2s global.$transition-timing-function .15s,
+    visibility .2s global.$transition-timing-function .15s;
 }

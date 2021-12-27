@@ -1,46 +1,46 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # header
   - layout
 
 **************************************************************************************************** */
+@use "../foundation/tool/global";
 
 
 .l-header {
-  @include z-index(header);
+  @include global.z-index(header);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: $g-header-height;
-  background-color: $g-color-white;
+  height: global.$header-height;
+  background-color: global.$color-white;
 }
 .l-header.is-fixed {
   position: fixed;
   transform: translate(0, -105%);
-  height: $g-header-height-fixed;
+  height: global.$header-height-fixed;
 }
 .header-is-fixed .l-header.is-fixed {
-  transition: $g-transition-duration $g-transition-timing-function;
+  transition: global.$transition-duration global.$transition-timing-function;
 }
 .site-scroll-up .l-header.is-fixed {
   transform: translate(0, 0);
-  transition: .48s $ease-out-custom;
+  transition: .48s global.$ease-out-custom;
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-header {
-    height: $g-header-height-pc;
+    height: global.$header-height-mq-min-md;
   }
   .l-header.is-fixed {
-    height: $g-header-height-fixed-pc;
+    height: global.$header-height-fixed-mq-min-md;
   }
 }
 
 /* gnav展開時
 ---------------------------------------------------------------------- */
 // .gnav-is-active .l-header {
-//   background-color: $g-color-white;
+//   background-color: global.$color-white;
 // }
 
 
@@ -56,5 +56,5 @@
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 0 $g-content-side-gutter 0;
+  padding: 0 global.$content-side-gutter 0;
 }

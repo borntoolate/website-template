@@ -1,13 +1,14 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # anchor-txt
   - utility
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
 
 .u-anchor-txt {
-  color: $g-color-link;
+  color: global.$color-link;
   text-decoration: underline;
   &:hover {
     text-decoration: none;

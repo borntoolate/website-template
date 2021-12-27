@@ -1,25 +1,34 @@
-@charset "UTF-8";
 /* ****************************************************************************************************
 
   # sentnece
   - component
 
 **************************************************************************************************** */
+@use "../../foundation/tool/global";
+
+$sentence-gap: 1rem;
+$sentence-gap-mq-min-md: 1.4rem;
 
 
 .c-sentence {
   position: relative;
 }
 
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
 .c-sentence__item {
   & + & {
-    margin-top: $g-sentence-gap;
+    margin-top: $sentence-gap;
   }
 }
-@media print, screen and (min-width: $g-breakpoint-up-m) {
+@media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-sentence__item {
     & + & {
-      margin-top: $g-sentence-gap-pc;
+      margin-top: $sentence-gap-mq-min-md;
     }
   }
 }

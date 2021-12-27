@@ -40,6 +40,8 @@ export class Loading {
           this.loadedImg++;
         });
       });
+    } else {
+      this.clearLoading();
     }
   }
 

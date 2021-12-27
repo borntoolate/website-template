@@ -23,10 +23,13 @@ export class SmoothScroll {
 
   bindEvent(): void {
     this.target.addEventListener('click', (e: MouseEvent): void => {
+      if (!(e.target instanceof HTMLElement)) {
+        return;
+      }
       // デフォルトの挙動をキャンセル
       e.preventDefault();
       e.stopPropagation();
-      if (!(e.target instanceof HTMLAnchorElement)) {
+      if (e.target === null) {
         return;
       }
       const eventTarget: HTMLElement = e.target;
@@ -39,6 +42,11 @@ export class SmoothScroll {
       if (clickedTarget === null) {
         return;
       }
+      // スクロール先の要素のY座標
+      let targetY: number;
+      if (clickedTarget.classList.contains('js-go-to-top')) {
+        targetY = 0;
+      } else {
       // スクロール先の要素のidを取得
       const destinationElmId: string | null = clickedTarget.getAttribute('href');
       if (destinationElmId === null) {
@@ -56,14 +64,16 @@ export class SmoothScroll {
       // ページ全体の高さ
       const documentHeight: number = document.body.clientHeight;
       // スクロール先の要素のY座標取得
-      let targetY: number;
+      // let targetY: number;
       // ターゲットのY座標+ウィンドウ高さがページ全体の高さを超えたとき（＝そこまでスクロールできない）は、ページ一番したまでの位置を取得
       if (destinationElm.offsetTop + window.innerHeight > documentHeight) {
         targetY = documentHeight - window.innerHeight;
       } else {
         // スクロール先の要素のY座標
-        targetY = destinationElm.offsetTop;
+        // targetY = destinationElm.offsetTop;
+        targetY = destinationElm.getBoundingClientRect().top + window.pageYOffset;
       }
+    }
       // アニメーションを実行
       this.exeScroll(targetY);
     }, false);

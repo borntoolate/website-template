@@ -27,11 +27,11 @@
 ====================================================================== */
 /* 上下余白大
 ---------------------------------------------------------------------- */
-.l-section.l-section--gap_l {
+.l-section.l-section--gap_lg {
   padding: global.$section-gutter 0;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
-  .l-section.l-section--gap_l {
+  .l-section.l-section--gap_lg {
     padding: global.$section-gutter-mq-min-md 0;
   }
 }
@@ -88,11 +88,11 @@
 
 /* 下余白大
 ---------------------------------------------------------------------- */
-.l-section.l-section--gap_bottom-l {
+.l-section.l-section--gap_bottom-lg {
   padding-bottom: global.$section-gutter;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
-  .l-section.l-section--gap_bottom-l {
+  .l-section.l-section--gap_bottom-lg {
     padding-bottom: global.$section-gutter-mq-min-md;
   }
 }

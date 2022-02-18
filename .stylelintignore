@@ -1,0 +1,5 @@
+dist/
+build/
+htdocs/
+temp/
+node_modules/

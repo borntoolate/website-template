@@ -7,8 +7,8 @@
 
 .c-list {
   display: block;
-  list-style-type: disc;
   padding: 0 0 0 1.8rem;
+  list-style-type: disc;
 }
 
 .c-list .c-list {
@@ -23,17 +23,16 @@
   margin-top: .5rem;
 }
 
-
 /* ======================================================================
 
   ## item
 
 ====================================================================== */
 .c-list__item {
-  display: list-item;
-  list-style-type: inherit;
   position: relative;
+  display: list-item;
   line-height: 1.5;
+  list-style-type: inherit;
 }
 
 .c-list__item + .c-list__item {

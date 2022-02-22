@@ -5,7 +5,6 @@
 // Dart Sass参考: Sassを@importから@useに置き換えるための手引き
 // https://kojika17.com/2020/05/next-generation-sass-module-system.html
 
-
 /* ****************************************************************************************************
 
   # foundation
@@ -18,9 +17,8 @@
 /* ## reset, base
 ---------------------------------------------------------------------- */
 // @use "foundation/base/_fonts";
-@use "foundation/base/_sanitize";
-@use "foundation/base/_base";
-
+@use 'foundation/base/_sanitize';
+@use 'foundation/base/_base';
 
 /* ****************************************************************************************************
 
@@ -30,15 +28,14 @@
 
 **************************************************************************************************** */
 
-@use "layout/_body";// レイヤー以外のコンテンツ
-@use "layout/_container";
-@use "layout/_footer";
-@use "layout/_header";
-@use "layout/_kv";
-@use "layout/_home-kv";
-@use "layout/_main";// ヘッダーとフッターを除いたコンテンツ
-@use "layout/_section";
-
+@use 'layout/_body'; // レイヤー以外のコンテンツ
+@use 'layout/_container';
+@use 'layout/_footer';
+@use 'layout/_header';
+@use 'layout/_kv';
+@use 'layout/_home-kv';
+@use 'layout/_main'; // ヘッダーとフッターを除いたコンテンツ
+@use 'layout/_section';
 
 /* ****************************************************************************************************
 
@@ -54,33 +51,32 @@
 
 ====================================================================== */
 // a
-@use "object/component/_accordion";
+@use 'object/component/_accordion';
 // d
-@use "object/component/_divider";
+@use 'object/component/_divider';
 // h
-@use "object/component/_heading";
+@use 'object/component/_heading';
 // f
-@use "object/component/_fade-in";
-@use "object/component/_fade-up";
+@use 'object/component/_fade-in';
+@use 'object/component/_fade-up';
 // g
 // @use "object/component/_grid";
 // l
-@use "object/component/_layered-image";
-@use "object/component/_liquid-img";
-@use "object/component/_list";
-@use "object/component/_logo";
+@use 'object/component/_layered-image';
+@use 'object/component/_liquid-img';
+@use 'object/component/_list';
+@use 'object/component/_logo';
 // n
-@use "object/component/_notice-list";
+@use 'object/component/_notice-list';
 // o
-@use "object/component/_ordered-list";
+@use 'object/component/_ordered-list';
 // p
-@use "object/component/_placeholder";
+@use 'object/component/_placeholder';
 // r
-@use "object/component/_row";
+@use 'object/component/_row';
 // s
-@use "object/component/_sentence";
+@use 'object/component/_sentence';
 // t
-
 
 /* ======================================================================
 
@@ -88,27 +84,27 @@
 
 ====================================================================== */
 // a
-@use "object/project/_accordion" as pAccordion;
-@use "object/project/_article-list";
+@use 'object/project/_accordion' as pAccordion;
+@use 'object/project/_article-list';
 // b
-@use "object/project/_bnr";
-@use "object/project/_btn";
+@use 'object/project/_bnr';
+@use 'object/project/_btn';
 // c
-@use "object/project/_card";
-@use "object/project/_copy";
+@use 'object/project/_card';
+@use 'object/project/_copy';
 // d
 // e
 // f
 // g
-@use "object/project/_gnav";
+@use 'object/project/_gnav';
 // h
-@use "object/project/_hamburger";
+@use 'object/project/_hamburger';
 // i
 // k
-@use "object/project/_kv-title";
+@use 'object/project/_kv-title';
 // l
-@use "object/project/_loading";
-@use "object/project/_logo" as pLogo;
+@use 'object/project/_loading';
+@use 'object/project/_logo' as pLogo;
 // m
 // n
 // o
@@ -116,15 +112,14 @@
 // q
 // r
 // s
-@use "object/project/_sitemap";
-@use "object/project/_sns";
+@use 'object/project/_sitemap';
+@use 'object/project/_sns';
 // t
-@use "object/project/_tab";
-@use "object/project/_title";
+@use 'object/project/_tab';
+@use 'object/project/_title';
 // v
 // y
 // w
-
 
 /* ======================================================================
 
@@ -140,7 +135,7 @@
 // f
 // g
 // h
-@use "object/scope/_home-kv-title";
+@use 'object/scope/_home-kv-title';
 // i
 // j
 // k
@@ -155,7 +150,6 @@
 // v
 // w
 
-
 /* ======================================================================
 
   ## theme
@@ -163,11 +157,10 @@
 
 ====================================================================== */
 
-@use "object/theme/_bg";
-@use "object/theme/_border";
-@use "object/theme/_color";
-@use "object/theme/_highlight";
-
+@use 'object/theme/_bg';
+@use 'object/theme/_border';
+@use 'object/theme/_color';
+@use 'object/theme/_highlight';
 
 /* ======================================================================
 
@@ -176,17 +169,16 @@
 
 ====================================================================== */
 
-@use "object/utility/_align";
-@use "object/utility/_anchor-txt";
-@use "object/utility/_clearfix";
-@use "object/utility/_clip";
-@use "object/utility/_hide";
-@use "object/utility/_margin";
-@use "object/utility/_padding";
-@use "object/utility/_txt-align";
-@use "object/utility/_txt-bold";
-@use "object/utility/_z-index";
-
+@use 'object/utility/_align';
+@use 'object/utility/_anchor-txt';
+@use 'object/utility/_clearfix';
+@use 'object/utility/_clip';
+@use 'object/utility/_hide';
+@use 'object/utility/_margin';
+@use 'object/utility/_padding';
+@use 'object/utility/_txt-align';
+@use 'object/utility/_txt-bold';
+@use 'object/utility/_z-index';
 
 /* ****************************************************************************************************
 

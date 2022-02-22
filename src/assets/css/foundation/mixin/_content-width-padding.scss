@@ -5,9 +5,8 @@
   - コンテンツの横幅を設定(padding)
 
 **************************************************************************************************** */
-@use "../variable/layout";
-@use "../variable/breakpoint";
-
+@use '../variable/layout';
+@use '../variable/breakpoint';
 
 @mixin content-width-padding() {
   width: 100%;

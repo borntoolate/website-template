@@ -4,12 +4,12 @@
   - utility
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
-
+@use '../../foundation/tool/global';
 
 .u-anchor-txt {
   color: global.$color-link;
   text-decoration: underline;
+
   &:hover {
     text-decoration: none;
   }

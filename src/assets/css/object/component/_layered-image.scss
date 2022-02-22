@@ -5,31 +5,30 @@
   スクロールして見えたらレイヤーが横にスッとずれる効果がある画像
 
 **************************************************************************************************** */
-@use "../../foundation/variable/color";
+@use '../../foundation/variable/color';
 
 $layered-image-width: 100% !default;
 $layered-image-color: color.$color-white !default;
-$layered-image-animation: 1s .2s cubic-bezier(0.48, 0.18, 0, 0.98);
-
+$layered-image-animation: 1s .2s cubic-bezier(.48, .18, 0, .98);
 
 .c-layered-image {
-  display: block;
   position: relative;
-  overflow: hidden;
+  display: block;
   width: $layered-image-width;
   height: auto;
+  overflow: hidden;
   // ▼スクロールのレイヤー
   &::before {
-    display: block;
-    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
+    display: block;
     width: 100%;
     height: 100%;
+    content: '';
     background-color: $layered-image-color;
     transition: transform $layered-image-animation;
-    content: "";
   }
 }
 
@@ -40,16 +39,15 @@ $layered-image-animation: 1s .2s cubic-bezier(0.48, 0.18, 0, 0.98);
   }
 }
 
-
 /* ======================================================================
 
   ## item
 
 ====================================================================== */
 .c-layered-image__item {
-  display: block;
   position: relative;
   z-index: 1;
+  display: block;
   width: 100%;
   max-width: none;
   height: auto;

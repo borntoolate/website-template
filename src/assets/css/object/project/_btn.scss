@@ -4,19 +4,17 @@
   - project
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
+@use '../../foundation/tool/global';
 // ```
 // .p-btn
 //   a.p-btn__inner(href="")
 //     p.p-btn__txt
 // ```
 
-
 .p-btn {
   display: block;
   margin-top: 2.8rem;
 }
-
 
 /* ======================================================================
 
@@ -32,7 +30,6 @@
   background-color: global.$color-gray;
 }
 
-
 /* ======================================================================
 
   ## txt
@@ -40,6 +37,6 @@
 ====================================================================== */
 .p-btn__txt {
   max-width: 100%;
-  text-align: center;
   color: global.$color-white;
+  text-align: center;
 }

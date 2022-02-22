@@ -4,8 +4,7 @@
   - component
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
-
+@use '../../foundation/tool/global';
 
 .c-heading {
   @include global.font-size-heading();

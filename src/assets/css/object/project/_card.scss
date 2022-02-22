@@ -4,7 +4,7 @@
   - project
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
+@use '../../foundation/tool/global';
 // ```
 // .p-card
 //   .p-card__divider
@@ -19,15 +19,13 @@
 //   .p-card__divider
 // ```
 
-
 .p-card {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-
 
 /* ======================================================================
 
@@ -48,15 +46,18 @@
     margin-bottom: 3.5%;
     margin-left: 3.5%;
   }
-  .p-card > .p-card__divider:nth-child(3n+1) {
+
+  .p-card > .p-card__divider:nth-child(3n + 1) {
     margin-left: 0;
   }
-  .p-card > .p-card__divider:nth-child(3n+1):nth-last-child(-n+3),
-  .p-card > .p-card__divider:nth-child(3n+1):nth-last-child(-n+3) ~ .p-card__divider {
+
+  .p-card > .p-card__divider:nth-child(3n + 1):nth-last-child(-n + 3),
+  .p-card
+    > .p-card__divider:nth-child(3n + 1):nth-last-child(-n + 3)
+    ~ .p-card__divider {
     margin-bottom: 0;
   }
 }
-
 
 /* ======================================================================
 
@@ -64,14 +65,9 @@
 
 ====================================================================== */
 .p-card__item {
-  display: block;
   position: relative;
+  display: block;
 }
-@media print, screen and (min-width: global.$breakpoint-min-md) {
-  .p-card__item {
-  }
-}
-
 
 /* ======================================================================
 
@@ -81,14 +77,17 @@
 // .p-card__head {
 // }
 
-
 /* ======================================================================
 
   ## image
 
 ====================================================================== */
 .p-card__image {
-  @include global.fitted-image($ratioWidth: 800, $ratioHeight: 534, $objectFitCover: true);
+  @include global.fitted-image(
+    $ratioWidth: 800,
+    $ratioHeight: 534,
+    $objectFitCover: true
+  );
 }
 
 /* ### img
@@ -106,7 +105,6 @@
 //   font-family: "object-fit: cover;";
 // }
 
-
 /* ======================================================================
 
   ## body
@@ -120,11 +118,11 @@
     padding-right: .8rem;
     padding-left: .8rem;
   }
+
   .p-card__head + .p-card__body {
     padding-top: 1.8rem;
   }
 }
-
 
 /* ======================================================================
 
@@ -133,9 +131,9 @@
 ====================================================================== */
 .p-card__date {
   position: relative;
-  color: global.$color-txt;
   font-size: global.$font-size-sm;
   line-height: 1.4;
+  color: global.$color-txt;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-card__date {
@@ -143,17 +141,17 @@
   }
 }
 
-
 /* ======================================================================
 
   ## title
 
 ====================================================================== */
 .p-card__title {
-  color: global.$color-txt;
   font-size: global.$font-size-md;
   font-weight: global.$font-weight-bold;
+  color: global.$color-txt;
 }
+
 .p-card__date + .p-card__title {
   margin-top: .5rem;
 }
@@ -163,17 +161,17 @@
   }
 }
 
-
 /* ======================================================================
 
   ## txt
 
 ====================================================================== */
 .p-card__txt {
-  color: global.$color-txt;
   font-size: global.$font-size;
   line-height: 1.5;
+  color: global.$color-txt;
 }
+
 .p-card__title + .p-card__txt {
   margin-top: .8rem;
 }
@@ -181,6 +179,7 @@
   .p-card__txt {
     font-size: global.$font-size-mq-min-md;
   }
+
   .p-card__title + .p-card__txt {
     margin-top: .9rem;
   }

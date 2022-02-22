@@ -4,8 +4,7 @@
   - foundation > variable > base
 
 **************************************************************************************************** */
-@use "sass:math";
-
+@use 'sass:math';
 
 /* ======================================================================
 
@@ -16,7 +15,6 @@ $header-height: 6.2rem;
 $header-height-fixed: 6.2rem;
 $header-height-mq-min-md: 11rem;
 $header-height-fixed-mq-min-md: 10rem;
-
 
 /* ======================================================================
 
@@ -37,24 +35,23 @@ $stacking-order: (
   over-gnav: 254,
   gnav: 253,
   modal-layer: 252,
-  fixed-btn: 255,
+  fixed-btn: 255
 );
-
 
 /* ======================================================================
 
   ## コンテンツ幅
 
 ====================================================================== */
+
 /* ### width
 ---------------------------------------------------------------------- */
 $content-width: 92vw;
 $content-width-lg: 92vw;
 $content-width-sm: 76vw;
-
 $content-width-sm-device: 88vw;
-$content-width-mq-min-md: 82.08333333vw;// 1182/1440
-$content-width-sm-mq-min-md: 66.66666667vw;// 960/1440
+$content-width-mq-min-md: 82.08333333vw; // 1182/1440
+$content-width-sm-mq-min-md: 66.66666667vw; // 960/1440
 
 /* ### side gutter
 ---------------------------------------------------------------------- */
@@ -64,7 +61,10 @@ $content-sm-side-gutter: math.div((100vw - $content-width-sm), 2);
 // pc
 $content-side-gutter-sm-device: math.div((100vw - $content-width-sm-device), 2);
 $content-side-gutter-mq-min-md: math.div((100vw - $content-width-mq-min-md), 2);
-$content-sm-side-gutter-mq-min-md: math.div((100vw - $content-width-sm-mq-min-md), 2);
+$content-sm-side-gutter-mq-min-md: math.div(
+  (100vw - $content-width-sm-mq-min-md),
+  2
+);
 
 /* ### max-width
 ---------------------------------------------------------------------- */
@@ -73,7 +73,6 @@ $content-max-width: 118.2rem;
 $content-max-width-lg: 116.8rem;
 $content-max-width-md: 96.6rem;
 $content-max-width-sm: 96rem;
-
 
 /* ======================================================================
 

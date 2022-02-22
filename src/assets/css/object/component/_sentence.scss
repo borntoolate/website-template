@@ -4,16 +4,14 @@
   - component
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
+@use '../../foundation/tool/global';
 
 $sentence-gap: 1rem;
 $sentence-gap-mq-min-md: 1.4rem;
 
-
 .c-sentence {
   position: relative;
 }
-
 
 /* ======================================================================
 

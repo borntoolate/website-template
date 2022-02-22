@@ -5,37 +5,43 @@
   - padding-topでアスペクト比維持の画像
 
 **************************************************************************************************** */
-@use "sass:math";
+@use 'sass:math';
 
-
-@mixin fitted-image($width: 100%, $ratioWidth, $ratioHeight, $objectFitCover: false) {
-  display: block;
+@mixin fitted-image(
+  $width: 100%,
+  $ratioWidth,
+  $ratioHeight,
+  $objectFitCover: false
+) {
   position: relative;
+  display: block;
   width: $width;
   height: auto;
+
   &::after {
-    display: block;
-    z-index: 0;
     position: relative;
     top: 0;
     left: 0;
+    z-index: 0;
+    display: block;
     width: 100%;
     height: auto;
     padding-top: math.div($ratioHeight, $ratioWidth) * 100%;
-    content: "";
+    content: '';
   }
+
   > img {
-    display: block;
-    z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: block;
     width: 100%;
+    transform: translate(-50%, -50%);
     @if $objectFitCover {
       height: 100%;
       object-fit: cover;
-      font-family: "object-fit: cover;";
+      font-family: 'object-fit: cover;';
     } @else {
       height: auto;
     }

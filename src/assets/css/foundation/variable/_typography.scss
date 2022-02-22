@@ -5,15 +5,14 @@
 
 **************************************************************************************************** */
 
-
 /* ======================================================================
 
   ## font-family
 
 ====================================================================== */
-$font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-$font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
-
+$font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', meiryo, sans-serif;
+$font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN',
+  'Hiragino Mincho Pro', serif;
 
 /* ======================================================================
 
@@ -21,7 +20,6 @@ $font-family-serif: 'YuMincho', 'Yu Mincho', 'Hiragino Mincho ProN', 'Hiragino M
 
 ====================================================================== */
 $line-height: 1.75;
-
 
 /* ======================================================================
 
@@ -31,7 +29,6 @@ $line-height: 1.75;
 $font-weight-normal: normal;
 $font-weight-bold: bold;
 
-
 /* ======================================================================
 
   ## 大きさ
@@ -39,24 +36,17 @@ $font-weight-bold: bold;
 ====================================================================== */
 $font-size: 1.4rem;
 $font-size-mq-min-md: 1.4rem;
-
 $font-size-sm: 1.2rem;
 $font-size-sm-mq-min-md: 1.2rem;
-
 $font-size-xs: 1rem;
 $font-size-xs-mq-min-md: 1rem;
-
 $font-size-md: 1.6rem;
 $font-size-md-mq-min-md: 1.6rem;
-
 $font-size-lg: 1.8rem;
 $font-size-lg-mq-min-md: 1.6rem;
-
 $font-size-xl: 1.8rem;
 $font-size-xl-mq-min-md: 3.8rem;
-
 $font-size-heading: 1.8rem;
 $font-size-heading-mq-min-md: 1.6rem;
-
 $font-size-title: 2.2rem;
 $font-size-title-mq-min-md: 2.4rem;

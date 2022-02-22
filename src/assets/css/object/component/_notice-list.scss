@@ -4,7 +4,7 @@
   - component
 
 ====================================================================== */
-@use "../../foundation/tool/global";
+@use '../../foundation/tool/global';
 
 $notice-list-font-size: global.$font-size;
 $notice-list-font-size-mq-min-md: (global.$font-size-mq-min-md - .1);
@@ -13,14 +13,12 @@ $notice-list-offset: (1em + $notice-list-bullet-gap);
 $notice-list-color: global.$color-txt;
 $notice-list-line-spacing: 1.4;
 $notice-list-gutter: .2em;
-
 $notice-list-gap: 1.4rem;
 $notice-list-gap-mq-min-md: 1.4rem;
 $notice-list-gap-sm: 1rem;
 $notice-list-gap-sm-mq-min-md: 1rem;
 $notice-list-gap-lg: 2rem;
 $notice-list-gap-lg-mq-min-md: 2rem;
-
 
 .c-notice-list {
   margin-top: $notice-list-gap;
@@ -67,23 +65,24 @@ $notice-list-gap-lg-mq-min-md: 2rem;
   }
 }
 
-
 /* ======================================================================
 
   item
 
 ====================================================================== */
 .c-notice-list__item {
-  list-style-type: none;
   position: relative;
   padding-left: $notice-list-offset;
   text-indent: -($notice-list-offset);
+  list-style-type: none;
+
   &::before {
     display: inline;
     margin-right: $notice-list-bullet-gap;
-    content: "※";
+    content: '※';
   }
 }
+
 .c-notice-list__item + .c-notice-list__item {
   margin-top: $notice-list-gutter;
 }

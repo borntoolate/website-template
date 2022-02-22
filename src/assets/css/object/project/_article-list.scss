@@ -4,8 +4,7 @@
   - project
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
-
+@use '../../foundation/tool/global';
 
 // ```
 // .p-article-list
@@ -20,10 +19,9 @@
 // ```
 
 .p-article-list {
-  display: block;
   position: relative;
+  display: block;
 }
-
 
 /* ======================================================================
 
@@ -35,9 +33,9 @@
 }
 
 .p-article-list__item {
-  display: block;
   position: relative;
-  padding: 1.4rem 1.4rem;
+  display: block;
+  padding: 1.4rem;
   border-bottom: 1px dashed global.$color-border;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
@@ -45,7 +43,6 @@
     padding: 2.4rem 2.6rem;
   }
 }
-
 
 /* ======================================================================
 
@@ -56,7 +53,6 @@
   display: block;
 }
 
-
 /* ======================================================================
 
   ## head
@@ -66,7 +62,6 @@
   position: relative;
 }
 
-
 /* ======================================================================
 
   ## date
@@ -74,9 +69,9 @@
 ====================================================================== */
 .p-article-list__date {
   position: relative;
-  color: global.$color-txt;
   font-size: global.$font-size-sm;
   line-height: 1.4;
+  color: global.$color-txt;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
   .p-article-list__date {
@@ -84,17 +79,17 @@
   }
 }
 
-
 /* ======================================================================
 
   ## title
 
 ====================================================================== */
 .p-article-list__title {
-  color: global.$color-txt;
   font-size: global.$font-size-md;
   font-weight: global.$font-weight-bold;
+  color: global.$color-txt;
 }
+
 .p-article-list__date + .p-article-list__title {
   margin-top: .5rem;
 }
@@ -104,7 +99,6 @@
   }
 }
 
-
 /* ======================================================================
 
   ## body
@@ -113,7 +107,6 @@
 .p-article-list__head + .p-article-list__body {
   margin-top: 1.4rem;
 }
-
 
 /* ======================================================================
 

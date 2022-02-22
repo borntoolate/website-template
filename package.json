@@ -13,7 +13,18 @@
     "fix-js": "npm run format-js && npm run lint-js",
     "format-css": "prettier --write './src/assets/css/**/*.scss'",
     "lint-css": "stylelint --fix './src/assets/css/**/*.scss'",
-    "fix-css": "npm run format-css && npm run lint-css"
+    "fix-css": "npm run format-css && npm run lint-css",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint --fix"
+    ]
   },
   "author": "naosuke wakahara",
   "license": "MIT",
@@ -50,8 +61,10 @@
     "gulp-sass": "^5.0.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-w3cjs": "^1.3.2",
+    "husky": "^7.0.4",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-pngquant": "^9.0.2",
+    "lint-staged": "^12.3.4",
     "node-sass": "^6.0.1",
     "path": "^0.12.7",
     "postcss": "^8.4.6",

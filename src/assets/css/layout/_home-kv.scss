@@ -4,12 +4,11 @@
   - layout
 
 **************************************************************************************************** */
-@use "../foundation/tool/global";
-
+@use '../foundation/tool/global';
 
 .l-home-kv {
-  display: block;
   position: relative;
+  display: block;
   width: 100%;
   height: 25rem;
 }
@@ -19,18 +18,17 @@
   }
 }
 
-
 /* ======================================================================
 
   ## container
 
 ====================================================================== */
 .l-home-kv__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
   position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   padding: 0 global.$content-side-gutter;
@@ -42,45 +40,45 @@
   }
 }
 
-
 /* ======================================================================
 
   ## image
 
 ====================================================================== */
 .l-home-kv__image {
-  display: block;
-  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
+  display: block;
   width: 100%;
   height: 100%;
+
   &::after {
-    display: block;
-    z-index: 1;
-    opacity: .7;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+    display: block;
     width: 100%;
     height: 100%;
+    content: '';
     background-color: #071505;
     mix-blend-mode: overlay;
-    content: "";
+    opacity: .7;
   }
 }
 
 /* ### img
 ---------------------------------------------------------------------- */
 .l-home-kv__image > img {
-  display: block;
-  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 0;
+  display: block;
   width: 100%;
   height: 100%;
+  font-family: 'object-fit: cover;';
   object-fit: cover;
-  font-family: "object-fit: cover;";
 }

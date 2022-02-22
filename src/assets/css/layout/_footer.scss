@@ -4,9 +4,8 @@
   - layout
 
 **************************************************************************************************** */
-@use "../foundation/tool/global";
-@use "sass:math";
-
+@use '../foundation/tool/global';
+@use 'sass:math';
 
 .l-footer {
   position: relative;
@@ -19,7 +18,6 @@
   }
 }
 
-
 /* ======================================================================
 
   top
@@ -27,7 +25,6 @@
 ====================================================================== */
 // .l-footer__top {
 // }
-
 
 /* ======================================================================
 
@@ -42,7 +39,6 @@
     margin-top: 8rem;
   }
 }
-
 
 /* ======================================================================
 
@@ -64,11 +60,10 @@
 @media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-footer__container.l-footer__container--has_grid {
     display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    justify-content: space-between;
   }
 }
-
 
 /* ======================================================================
 

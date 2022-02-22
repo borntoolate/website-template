@@ -5,17 +5,15 @@
 
 **************************************************************************************************** */
 
-
 .c-ordered-list {
   display: block;
-  list-style-type: decimal;
   padding: 0 0 0 1.8rem;
+  list-style-type: decimal;
 }
 
 .c-ordered-list__item > .c-ordered-list {
   margin-top: .5rem;
 }
-
 
 /* ======================================================================
 
@@ -23,11 +21,11 @@
 
 ====================================================================== */
 .c-ordered-list__item {
-  display: list-item;
-  list-style-type: inherit;
   position: relative;
+  display: list-item;
   padding: 0 0 0 .3rem;
   line-height: 1.5;
+  list-style-type: inherit;
 }
 
 .c-ordered-list__item + .c-ordered-list__item {

@@ -4,8 +4,7 @@
   - theme
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
-
+@use '../../foundation/tool/global';
 
 .t-bg-skelton {
   background-color: transparent !important;
@@ -20,13 +19,13 @@
 }
 
 .t-bg-stripe-blue {
+  background-color: global.$color-white;
   background-image: repeating-linear-gradient(
     90deg,
     transparent,
     transparent 50%,
     global.$color-blue 50%,
-    global.$color-blue 100%,
+    global.$color-blue 100%
   );
   background-size: 3.7rem 3.7rem;
-  background-color: global.$color-white;
 }

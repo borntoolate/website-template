@@ -4,26 +4,23 @@
   - component
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
-
+@use '../../foundation/tool/global';
 
 .c-fade-up {
-  opacity: 0;
   position: relative;
   top: 2.2rem;
-  transition:
-    opacity .5s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0s,
-    top .7s cubic-bezier(0.445, 0.050, 0.550, 0.950) .1s;
+  opacity: 0;
+  transition: opacity .5s cubic-bezier(.445, .05, .55, .95) 0s,
+    top .7s cubic-bezier(.445, .05, .55, .95) .1s;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
   .c-fade-up {
-    transition:
-    opacity .5s cubic-bezier(0.445, 0.050, 0.550, 0.950) 0s,
-    top .7s cubic-bezier(0.445, 0.050, 0.550, 0.950) .1s;
+    transition: opacity .5s cubic-bezier(.445, .05, .55, .95) 0s,
+      top .7s cubic-bezier(.445, .05, .55, .95) .1s;
   }
 }
 
 .c-fade-up.is-inview {
-  opacity: 1;
   top: 0;
+  opacity: 1;
 }

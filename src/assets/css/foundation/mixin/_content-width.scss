@@ -5,9 +5,8 @@
   - コンテンツの横幅を設定
 
 **************************************************************************************************** */
-@use "../variable/layout";
-@use "../variable/breakpoint";
-
+@use '../variable/layout';
+@use '../variable/breakpoint';
 
 @mixin content-width() {
   width: layout.$content-width-sm-device;

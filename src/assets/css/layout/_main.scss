@@ -4,13 +4,12 @@
   - layout
 
 **************************************************************************************************** */
-@use "../foundation/tool/global";
-
+@use '../foundation/tool/global';
 
 .l-main {
   position: relative;
-  background-color: transparent;
   padding: global.$header-height 0 0;
+  background-color: transparent;
 }
 @media print, screen and (min-width: global.$breakpoint-min-md) {
   .l-main {

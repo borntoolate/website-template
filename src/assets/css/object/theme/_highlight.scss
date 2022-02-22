@@ -5,9 +5,14 @@
 
 **************************************************************************************************** */
 
-
 .t-highlight {
   display: inline;
   padding: 0 .1rem;
-  background-image: linear-gradient(180deg, transparent 0%, transparent 52%, #fcd0df 52%, #fcd0df 100%);
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 52%,
+    #fcd0df 52%,
+    #fcd0df 100%
+  );
 }

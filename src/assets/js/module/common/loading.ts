@@ -35,7 +35,10 @@ export class Loading {
   start(): void {
     if (this.loadingElm) {
       imagesLoaded(this.loadingElm, (): void => {
-        this.timer = window.setInterval(this.monitorProgress.bind(this), 1000 / 50);
+        this.timer = window.setInterval(
+          this.monitorProgress.bind(this),
+          1000 / 50
+        );
         imagesLoaded('body', {background: true}).on('progress', () => {
           this.loadedImg++;
         });

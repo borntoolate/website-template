@@ -4,7 +4,7 @@
   - component
 
 **************************************************************************************************** */
-@use "../../foundation/tool/global";
+@use '../../foundation/tool/global';
 // ```
 // .c-divider
 //   ...
@@ -18,7 +18,6 @@ $divider-gap-sm: 1.4rem;
 $divider-gap-sm-mq-min-md: 2.8rem;
 $divider-gap-lg: 5rem;
 $divider-gap-lg-mq-min-md: 8.6rem;
-
 
 .c-divider + .c-divider {
   margin-top: $divider-gap;

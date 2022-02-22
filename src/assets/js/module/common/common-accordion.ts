@@ -15,20 +15,29 @@ export class CommonAccordion {
     if (!(this.trg instanceof HTMLElement)) {
       return;
     }
-    this.trg.addEventListener('click', (e: MouseEvent): void => {
-      if (!(e.target instanceof HTMLElement)) {
-        return;
-      }
-      const target: HTMLElement = e.target;
-      if (target.classList.contains(CommonAccordion.trgClassName) || target.closest(`.${CommonAccordion.trgClassName}`) !== null) {
-        const parent: HTMLElement = this.wrapper;
-        if (!parent.classList.contains(CommonAccordion.toggleClassName)) {
-          parent.classList.add(CommonAccordion.toggleClassName);
-        } else if (parent.classList.contains(CommonAccordion.toggleClassName)) {
-          parent.classList.remove(CommonAccordion.toggleClassName);
+    this.trg.addEventListener(
+      'click',
+      (e: MouseEvent): void => {
+        if (!(e.target instanceof HTMLElement)) {
+          return;
         }
-      }
-    }, false);
+        const target: HTMLElement = e.target;
+        if (
+          target.classList.contains(CommonAccordion.trgClassName) ||
+          target.closest(`.${CommonAccordion.trgClassName}`) !== null
+        ) {
+          const parent: HTMLElement = this.wrapper;
+          if (!parent.classList.contains(CommonAccordion.toggleClassName)) {
+            parent.classList.add(CommonAccordion.toggleClassName);
+          } else if (
+            parent.classList.contains(CommonAccordion.toggleClassName)
+          ) {
+            parent.classList.remove(CommonAccordion.toggleClassName);
+          }
+        }
+      },
+      false
+    );
   }
 
   static init(): void {

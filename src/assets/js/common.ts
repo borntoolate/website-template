@@ -3,7 +3,7 @@
   # common.js
 
 **************************************************************************************************** */
-import "@babel/polyfill";
+import '@babel/polyfill';
 require('element-closest-polyfill');
 
 // ResizeManager
@@ -19,7 +19,7 @@ import {SetGnav} from './module/common/set-gnav';
 import {CommonScroll} from './module/common/common-scroll';
 
 // Placeholder
-import {Placeholder} from  './module/common/placeholder';
+import {Placeholder} from './module/common/placeholder';
 
 // SetWidth
 import {SetWidth} from './module/common/set-width';
@@ -33,19 +33,22 @@ import {CommonAccordion} from './module/common/common-accordion';
 // CommonTab
 import {CommonTab} from './module/common/common-tab';
 
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    // const resizeManager = new ResizeManager();
 
-document.addEventListener('DOMContentLoaded', () => {
-  // const resizeManager = new ResizeManager();
+    new Loading();
+    new SetGnav();
+    new CommonScroll('js-inview');
+    Placeholder.init();
+    SetWidth.init();
+    SmoothScroll.init();
+    CommonAccordion.init();
+    CommonTab.init();
 
-  new Loading();
-  new SetGnav();
-  new CommonScroll('js-inview');
-  Placeholder.init();
-  SetWidth.init();
-  SmoothScroll.init();
-  CommonAccordion.init();
-  CommonTab.init();
-
-  // resizeManager.add(hoge.init.bind(hoge));
-  // resizeManager.init();
-}, false);
+    // resizeManager.add(hoge.init.bind(hoge));
+    // resizeManager.init();
+  },
+  false
+);

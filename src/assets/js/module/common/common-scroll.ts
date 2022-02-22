@@ -16,7 +16,8 @@ export class CommonScroll {
 
   static root: HTMLElement | null = document.querySelector('html');
   static header: HTMLElement | null = document.getElementById('js-header');
-  static headerTrg: HTMLElement | null = document.getElementById('js-header-trg');
+  static headerTrg: HTMLElement | null =
+    document.getElementById('js-header-trg');
   static headerTrgPos = 0;
   static headerTrgClientRect = 0;
   static scrollPos = 0;
@@ -30,25 +31,29 @@ export class CommonScroll {
   }
 
   bindEvent(): void {
-    window.addEventListener('scroll', (): void => {
-      if (!this.isRunning) {
-        window.requestAnimationFrame(() => {
-          this.isRunning = false;
-          CommonScroll.scrollPos = window.pageYOffset;
-          this.checkSiteScrolled();
-          this.toggleHeaderState();
+    window.addEventListener(
+      'scroll',
+      (): void => {
+        if (!this.isRunning) {
+          window.requestAnimationFrame(() => {
+            this.isRunning = false;
+            CommonScroll.scrollPos = window.pageYOffset;
+            this.checkSiteScrolled();
+            this.toggleHeaderState();
+          });
+          this.isRunning = true;
+        }
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+        inView.offset({
+          bottom: 60
         });
-        this.isRunning = true;
-      }
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-      inView.offset({
-        bottom: 60
-      });
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
-      inView(this.selector).on('enter', (target: HTMLElement) => {
-        target.classList.add('in-view');
-      });
-    }, false);
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+        inView(this.selector).on('enter', (target: HTMLElement) => {
+          target.classList.add('in-view');
+        });
+      },
+      false
+    );
   }
 
   checkSiteScrolled(): void {
@@ -62,7 +67,7 @@ export class CommonScroll {
           CommonScroll.root.classList.add('site-scroll-down');
         }
       }
-    // 上方向にスクロールしているとき
+      // 上方向にスクロールしているとき
     } else {
       if (CommonScroll.root !== null) {
         if (CommonScroll.root.classList.contains('site-scroll-down')) {
@@ -78,8 +83,10 @@ export class CommonScroll {
 
   toggleHeaderState(): void {
     if (CommonScroll.headerTrg !== null) {
-      CommonScroll.headerTrgClientRect = CommonScroll.headerTrg.getBoundingClientRect().top;
-      CommonScroll.headerTrgPos = CommonScroll.scrollPos + CommonScroll.headerTrgClientRect;
+      CommonScroll.headerTrgClientRect =
+        CommonScroll.headerTrg.getBoundingClientRect().top;
+      CommonScroll.headerTrgPos =
+        CommonScroll.scrollPos + CommonScroll.headerTrgClientRect;
     } else {
       CommonScroll.headerTrgPos = 0;
     }
@@ -87,7 +94,7 @@ export class CommonScroll {
       if (CommonScroll.scrollPos > CommonScroll.headerTrgPos) {
         if (!CommonScroll.header.classList.contains('is-fixed')) {
           CommonScroll.header.classList.add('is-fixed');
-          setTimeout(function() {
+          setTimeout(function () {
             if (CommonScroll.root !== null) {
               CommonScroll.root.classList.add('header-is-fixed');
             }

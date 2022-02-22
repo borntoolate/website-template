@@ -2,7 +2,9 @@
 export class SetWidth {
   wrapper: HTMLElement;
   width: string | null;
-  static mediaQuery: MediaQueryList | undefined = window.matchMedia('screen and (min-width: 768px)');
+  static mediaQuery: MediaQueryList | undefined = window.matchMedia(
+    'screen and (min-width: 768px)'
+  );
   constructor(wrapper: HTMLElement) {
     this.wrapper = wrapper;
     this.width = this.wrapper.getAttribute('data-width');
@@ -12,7 +14,11 @@ export class SetWidth {
   process(): void {
     this.setVal();
     if (SetWidth.mediaQuery != null) {
-      SetWidth.mediaQuery.addEventListener('change', this.setVal.bind(this), false);
+      SetWidth.mediaQuery.addEventListener(
+        'change',
+        this.setVal.bind(this),
+        false
+      );
     }
   }
 
@@ -27,12 +33,13 @@ export class SetWidth {
         } else {
           this.wrapper.style.width = widthVal;
         }
-      }// if (widthArray.length) {
-    }// if (width !== null && width !== '') {
+      } // if (widthArray.length) {
+    } // if (width !== null && width !== '') {
   }
 
   static init(): void {
-    const target: HTMLCollection = document.getElementsByClassName('js-set-width');
+    const target: HTMLCollection =
+      document.getElementsByClassName('js-set-width');
     if (target.length) {
       for (let i = 0; i < target.length; i++) {
         if (!(target[i] instanceof HTMLElement)) {

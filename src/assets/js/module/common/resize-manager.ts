@@ -19,20 +19,24 @@ export class ResizeManager {
 
   init(): void {
     this.update();
-    window.addEventListener('resize', () => {
-      if (!this.isRunning) {
-        this.isRunning = true;
-        if (window.requestAnimationFrame) {
-          window.requestAnimationFrame(() => {
-            this.update();
-          });
-        } else {
-          setTimeout(() => {
-            this.update();
-          }, 1000 / this.fps);
+    window.addEventListener(
+      'resize',
+      () => {
+        if (!this.isRunning) {
+          this.isRunning = true;
+          if (window.requestAnimationFrame) {
+            window.requestAnimationFrame(() => {
+              this.update();
+            });
+          } else {
+            setTimeout(() => {
+              this.update();
+            }, 1000 / this.fps);
+          }
         }
-      }
-    }, false);
+      },
+      false
+    );
   }
 
   add(targetFunction: myFunction): void {

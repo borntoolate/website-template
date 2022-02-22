@@ -27,7 +27,6 @@ export class SetGnav {
   }
 }
 
-
 class ToggleGnav {
   element: HTMLElement | Element;
   className: string;
@@ -39,17 +38,21 @@ class ToggleGnav {
 
   handleClick(): void {
     if (this.element === null) {
-      return
+      return;
     }
-    this.element.addEventListener('click', (): void => {
-      if (this.isGnavItem()) {
-        this.deactivate();
-      } else if (this.isActive()) {
-        this.deactivate();
-      } else {
-        this.activate();
-      }
-    }, false);
+    this.element.addEventListener(
+      'click',
+      (): void => {
+        if (this.isGnavItem()) {
+          this.deactivate();
+        } else if (this.isActive()) {
+          this.deactivate();
+        } else {
+          this.activate();
+        }
+      },
+      false
+    );
   }
 
   isGnavItem(): boolean {
@@ -57,7 +60,7 @@ class ToggleGnav {
       return false;
     }
     if (this.element.classList.contains('js-gnav__item')) {
-      return true
+      return true;
     } else {
       return false;
     }
@@ -68,7 +71,7 @@ class ToggleGnav {
       return false;
     }
     if (this.element.classList.contains(this.className)) {
-      return true
+      return true;
     } else {
       return false;
     }
@@ -100,6 +103,4 @@ class ToggleGnav {
       SetGnav.gnav.classList.remove(this.className);
     }
   }
-
 }
-

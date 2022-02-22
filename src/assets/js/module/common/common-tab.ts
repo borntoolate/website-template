@@ -23,49 +23,65 @@ export class CommonTab {
           return;
         }
         const thisTrg = this.trg[i] as HTMLElement;
-        thisTrg.addEventListener('click', (e: MouseEvent): void => {
-          if (!(e.target instanceof HTMLElement)) {
-            return;
-          }
-          const target: HTMLElement = e.target;
-          const parent: HTMLElement | null = target.closest(`.${CommonTab.parentClassName}`);
-          if (parent !== null) {
-            let clickedTrg: HTMLElement | null;
-            const siblingTrgs: HTMLCollection = parent.getElementsByClassName(CommonTab.trgClassName);
-            const relatedConts: HTMLCollection = parent.getElementsByClassName(CommonTab.contClassName);
-            // ▼is-currentリセット
-            if (siblingTrgs.length) {
-              for (let j = 0; j < siblingTrgs.length; j++) {
-                if (!(siblingTrgs[i] instanceof HTMLElement)) {
-                  continue;
-                }
-                siblingTrgs[j].classList.remove(CommonTab.toggleClassName);
-              }
-            }
-            if (relatedConts.length) {
-              for (let j = 0; j < relatedConts.length; j++) {
-                if (!(relatedConts[i] instanceof HTMLElement)) {
-                  continue;
-                }
-                relatedConts[j].classList.remove(CommonTab.toggleClassName);
-              }
-            }
-            // ▼is-current追加
-            if (target.classList.contains(CommonTab.trgClassName)) {
-              clickedTrg = target;
-            } else if (target.closest(`.${CommonTab.trgClassName}`) !== null) {
-              clickedTrg = target.closest(`.${CommonTab.trgClassName}`);
-            } else {
+        thisTrg.addEventListener(
+          'click',
+          (e: MouseEvent): void => {
+            if (!(e.target instanceof HTMLElement)) {
               return;
             }
-            if (!(clickedTrg instanceof HTMLElement)) {
-              return;
+            const target: HTMLElement = e.target;
+            const parent: HTMLElement | null = target.closest(
+              `.${CommonTab.parentClassName}`
+            );
+            if (parent !== null) {
+              let clickedTrg: HTMLElement | null;
+              const siblingTrgs: HTMLCollection = parent.getElementsByClassName(
+                CommonTab.trgClassName
+              );
+              const relatedConts: HTMLCollection =
+                parent.getElementsByClassName(CommonTab.contClassName);
+              // ▼is-currentリセット
+              if (siblingTrgs.length) {
+                for (let j = 0; j < siblingTrgs.length; j++) {
+                  if (!(siblingTrgs[i] instanceof HTMLElement)) {
+                    continue;
+                  }
+                  siblingTrgs[j].classList.remove(CommonTab.toggleClassName);
+                }
+              }
+              if (relatedConts.length) {
+                for (let j = 0; j < relatedConts.length; j++) {
+                  if (!(relatedConts[i] instanceof HTMLElement)) {
+                    continue;
+                  }
+                  relatedConts[j].classList.remove(CommonTab.toggleClassName);
+                }
+              }
+              // ▼is-current追加
+              if (target.classList.contains(CommonTab.trgClassName)) {
+                clickedTrg = target;
+              } else if (
+                target.closest(`.${CommonTab.trgClassName}`) !== null
+              ) {
+                clickedTrg = target.closest(`.${CommonTab.trgClassName}`);
+              } else {
+                return;
+              }
+              if (!(clickedTrg instanceof HTMLElement)) {
+                return;
+              }
+              clickedTrg.classList.add(CommonTab.toggleClassName);
+              const clickedTrgOrder: number = Array.prototype.indexOf.call(
+                siblingTrgs,
+                clickedTrg
+              );
+              relatedConts[clickedTrgOrder].classList.add(
+                CommonTab.toggleClassName
+              );
             }
-            clickedTrg.classList.add(CommonTab.toggleClassName);
-            const clickedTrgOrder: number = Array.prototype.indexOf.call(siblingTrgs, clickedTrg);
-            relatedConts[clickedTrgOrder].classList.add(CommonTab.toggleClassName);
-          }
-        }, false);
+          },
+          false
+        );
       }
     }
   }

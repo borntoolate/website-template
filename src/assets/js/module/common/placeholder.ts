@@ -9,12 +9,16 @@ export class Placeholder {
 
   process(): void {
     if (this.item && this.spacer) {
-      if (this.item instanceof HTMLElement && this.spacer instanceof HTMLElement) {
+      if (
+        this.item instanceof HTMLElement &&
+        this.spacer instanceof HTMLElement
+      ) {
         const ratio: string | null = this.item.getAttribute('data-ratio');
         if (ratio !== null && ratio !== '') {
           const ratioArray: string[] = ratio.split('/');
           if (ratioArray.length === 2) {
-            const padding = parseFloat(ratioArray[1]) / parseFloat(ratioArray[0]) * 100;
+            const padding =
+              (parseFloat(ratioArray[1]) / parseFloat(ratioArray[0])) * 100;
             this.spacer.style.paddingTop = `${padding}%`;
           }
         }
@@ -23,7 +27,8 @@ export class Placeholder {
   }
 
   static init(): void {
-    const target: HTMLCollection = document.getElementsByClassName('js-get-ratio');
+    const target: HTMLCollection =
+      document.getElementsByClassName('js-get-ratio');
     if (target.length) {
       for (let i = 0; i < target.length; i++) {
         if (!(target[i] instanceof HTMLElement)) {

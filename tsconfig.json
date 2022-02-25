@@ -2,11 +2,11 @@
 // https://qiita.com/ryokkkke/items/390647a7c26933940470
 {
   "include": [
-    "./src/assets/js/**/*"
+    "./src/assets/js/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    "./src/assets/js/**/_*",
+    "./src/assets/js/**/_*.ts",
     "./src/assets/js/module/vendor/",
   ],
   "compilerOptions": {

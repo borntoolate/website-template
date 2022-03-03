@@ -85,7 +85,11 @@ const html = (done) => {
     )
     .pipe(
       data((file) => {
-        locals.pageAbsolutePath = `/${path
+        locals.relativePath = `./${path.relative(
+          `${path.dirname(file.path)}/`,
+          `${__dirname}/src/`
+        )}/`.replace(/\/\//g, '/');
+        locals.absolutePath = `/${path
           .relative(file.base, file.path.replace(/.pug$/, '.html'))
           .replace(/index\.html$/, '')}`;
         return locals;

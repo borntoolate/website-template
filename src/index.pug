@@ -1,19 +1,14 @@
 extend /_includes/_layout
 append variables
-  //- Required
-  - var pageTitle= "";
-  - var pageDescription= site.description;
-  - var pageKeywords= site.keywords;
-  //- Optional
-  - var pageOgpTitle= "";
-  - var pageOgpImage= site.ogpImage
-  - var pageLang= "ja";
-  - var pageOgpType= "website";
-  //- Not modified
-  - var pageUrl= relativePath;
-  - var _relativePath= "./";
-  //- page
-  - var _pagePrefix= "home";
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "home";
 
 block content
 
@@ -25,7 +20,7 @@ block content
       div.s-home-kv-title
         h1.s-home-kv-title__item home key visual
     div.l-home-kv__image
-      img.js-ofi(src=`${_relativePath}assets/img/other/dummy.jpg` alt="")
+      img.js-ofi(src=`${relativePath}assets/img/other/dummy.jpg` alt="")
 
 
   div#js-header-trg
@@ -59,7 +54,7 @@ block content
             li.c-ordered-list__item なべてのなやみを たきぎともしつつ
             li.c-ordered-list__item はえある世界を ともにつくらん
       div.p-btn
-        a.p-btn__item(href=`${_relativePath}`)
+        a.p-btn__item(href=`${relativePath}`)
           p.p-btn__txt もっと見る
 
 

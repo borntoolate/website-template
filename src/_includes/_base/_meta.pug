@@ -10,11 +10,11 @@ meta(name="description" content=pageDescription)
 meta(name="keywords" content=pageKeywords)
 
 block css
-  link(rel="stylesheet" href=`${_relativePath}assets/css/style.css`)
+  link(rel="stylesheet" href=`${relativePath}assets/css/style.css`)
 
 //- icons
-link(rel="apple-touch-icon" href=`${_relativePath}assets/img/common/apple-touch-icon.png`)
-link(rel="icon" href=`${_relativePath}assets/img/common/favicon.png`)
+link(rel="apple-touch-icon" href=`${relativePath}assets/img/common/apple-touch-icon.png`)
+link(rel="icon" href=`${relativePath}assets/img/common/favicon.png`)
 
 //- OGP
 if pageOgpTitle
@@ -29,10 +29,11 @@ meta(property="og:site_name" content=site.name)
 meta(property="og:locale" content=pageLang)
 
 //- OGP Facebook insights
+meta(property="fb:admins" content="")
+meta(property="fb:app_id" content="")
 //- /OGP Facebook insights
 
 //- OGP Twitter Cards
 meta(name="twitter:card" content="summary_large_image")
 //- /OGP Twitter Cards
-
 //- /OGP
